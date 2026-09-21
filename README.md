@@ -40,7 +40,7 @@ The input is a SAT formula is DIMACS format. A detailed description can be found
 ### Running the solver
 If the input is in a file input.cnf, use
 ```
-$ ./solver input1.cnf innput2.cnf
+$ ./solver input1.cnf input2.cnf
 ```
 
 ### Example
