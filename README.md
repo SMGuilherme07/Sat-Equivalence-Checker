@@ -21,7 +21,7 @@ $ cd SAT-Solver-DPLL
 
 * Compile the program
 ```
-$ make
+$ g++ solver.cpp -o solver
 ```
 
 If you use a different compiler, please edit the Makefile accordingly.
@@ -40,7 +40,7 @@ The input is a SAT formula is DIMACS format. A detailed description can be found
 ### Running the solver
 If the input is in a file input.cnf, use
 ```
-$ ./solver < input.cnf
+$ ./solver input1.cnf innput2.cnf
 ```
 
 ### Example
