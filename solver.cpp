@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <cstdlib>
 
 using namespace std;
 
@@ -64,19 +65,24 @@ public:
   }
 };
 
+void erro(const string &msg){
+  cout << "Erro: " << msg << endl;
+  exit(1);
+}
+
 Formula readCNF(string filename)
 {
   ifstream file(filename);
   if (!file.is_open())
   {
-    cout << "Erro ao abrir: " << filename << endl;
-    exit(1);
+    erro("não foi possível abrir o arquivo");
   }
 
   Formula formula;
   char c;
   string s;
-  int clause_count;
+  int clause_count = -1;
+  bool header_found = false;
 
   while (file >> c)
   {
@@ -87,29 +93,70 @@ Formula readCNF(string filename)
     else if (c == 'p')
     {
       file >> s;
-      file >> formula.num_vars;
-      file >> clause_count;
+      if(s!= "cnf"){
+        erro("cabeçalho invalido");
+      }
+      if(!(file >> formula.num_vars>>clause_count)){
+        erro("cabeçalho invalido");
+      }
+      header_found = true;
       break;
     }
   }
 
+  if(!header_found){
+    erro("cabeçalho invalido");
+  }
+  if(formula.num_vars <=0){
+    erro("o numero de variaveis deve ser maior que 0");
+  }
+  if(clause_count<=0){
+    erro("o numero de clausulas deve ser maior que 0");
+  }
+
   formula.clauses.resize(clause_count);
-  int literal;
+  vector<bool> usada(formula.num_vars, false);
+  int vars_distintas=0;
 
   for (int i = 0; i < clause_count; i++)
   {
-    while (file >> literal && literal != 0)
+    int literal;
+    bool terminou=false;
+    while (file >> literal)
     {
-      if (literal > 0)
+      if (literal == 0)
       {
-        formula.clauses[i].push_back(2 * (literal - 1));
+        terminou=true;
+        break;
       }
-      else
-      {
-        formula.clauses[i].push_back(2 * ((-1) * literal - 1) + 1);
+      int var = abs(literal);
+      if(var>formula.num_vars){
+        erro("numero de variaveis diferente do declarado");
+      }
+      if(!usada[var-1]){
+        usada[var-1]=true;
+        vars_distintas++;
+      }
+
+      if(literal>0){
+        formula.clauses[i].push_back(2*(var-1));
+      }else{
+        formula.clauses[i].push_back(2*(var-1)+1);
       }
     }
+
+    if(!terminou){
+      erro("numero de clausulas diferente do declarado");
+    }
   }
+    int extra;
+    if(file>>extra){
+      erro("numero de clausulas diferente do declarado");
+    }
+
+    if(vars_distintas != formula.num_vars){
+      erro("numero de variaveis diferente do declarado");
+    }
 
   file.close();
   formula.recalculate_stats();
@@ -309,6 +356,10 @@ bool check_equivalence(Formula f1, Formula f2, SATSolverDPLL &solver)
 
 int main(int argc, char *argv[])
 {
+  if(argc!=3){
+    cout<<"Uso: "<<argv[0]<<"<arquivo1.cnf> <arquivo2.cnf>" << endl;
+    return 1;
+  }
   vector<string> argumentos;
   for (int i = 0; i < argc; i++)
   {
