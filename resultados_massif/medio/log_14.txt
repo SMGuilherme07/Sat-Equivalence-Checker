@@ -1,0 +1,6 @@
+==804== Massif, a heap profiler
+==804== Copyright (C) 2003-2024, and GNU GPL'd, by Nicholas Nethercote et al.
+==804== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==804== Command: ./solver medio/f1.cnf medio/f2_equivalente.cnf
+==804== 
+==804== 

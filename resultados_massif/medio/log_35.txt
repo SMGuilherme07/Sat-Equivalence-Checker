@@ -1,0 +1,6 @@
+==860== Massif, a heap profiler
+==860== Copyright (C) 2003-2024, and GNU GPL'd, by Nicholas Nethercote et al.
+==860== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
+==860== Command: ./solver medio/f1.cnf medio/f2_equivalente.cnf
+==860== 
+==860== 
