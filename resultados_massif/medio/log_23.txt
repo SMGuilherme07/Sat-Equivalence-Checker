@@ -1,6 +1,0 @@
-==836== Massif, a heap profiler
-==836== Copyright (C) 2003-2024, and GNU GPL'd, by Nicholas Nethercote et al.
-==836== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
-==836== Command: ./solver medio/f1.cnf medio/f2_equivalente.cnf
-==836== 
-==836== 

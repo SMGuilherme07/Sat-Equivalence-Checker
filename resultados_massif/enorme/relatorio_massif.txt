@@ -1,0 +1,1462 @@
+--------------------------------------------------------------------------------
+Command:            ./solver enorme/f1.cnf enorme/f2_equivalente.cnf
+Massif arguments:   --time-unit=ms --massif-out-file=resultados_massif/enorme/massif.out
+ms_print arguments: resultados_massif/enorme/massif.out
+--------------------------------------------------------------------------------
+
+
+    KB
+506.3^  #                                                                     
+     |  #    :::::@  :::     :::  :     :  ::  :    :    @:  ::   :   : :: :::
+     |  #    : :: @  ::    :::    :   : :  :   :    :    @:  :    :   : :: @::
+     |  #  ::: :: @  ::    : :    : ::: : ::   ::   :    @: ::   ::   : :::@::
+     |  #::: : :: @  :: :  : :    : : : : :: @ ::  @:: ::@: :: @ ::   :::::@:@
+     |  #: : : :: @  :: :  : :    : : : : :: @ ::  @:: : @: :: @ ::  @:::::@:@
+     |  #: : : :: @  :: :  : :  ::: : :@:::: @:::  @:::: @: :: @:::::@:::::@:@
+     |  #: : : :: @:::: :::: :  : ::: :@:::: @:::::@:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+     |  #: : : :: @: :: :: : :  : ::: :@:::: @:::: @:::: @:::: @:::: @:::::@:@
+   0 +----------------------------------------------------------------------->s
+     0                                                                   12.06
+
+Number of snapshots: 68
+ Detailed snapshots: [2 (peak), 8, 21, 26, 31, 36, 41, 46, 57, 67]
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1            449           73,736           73,728             8            0
+  2            499          518,472          406,036       112,436            0
+78.31% (406,036B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->18.53% (96,096B) 0x4004D27: allocate (new_allocator.h:151)
+| ->18.53% (96,096B) 0x4004D27: allocate (alloc_traits.h:614)
+|   ->18.53% (96,096B) 0x4004D27: _M_allocate (stl_vector.h:387)
+|     ->18.53% (96,096B) 0x4004D27: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1910)
+|       ->18.53% (96,096B) 0x4004D27: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|         ->09.26% (48,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|         | ->04.63% (24,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->04.63% (24,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->04.64% (24,048B) 0x40058B3: Formula (solver.cpp:35)
+|         | ->04.64% (24,048B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |   ->04.64% (24,048B) 0x4005D9E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|         |     ->04.64% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |       
+|         ->04.64% (24,048B) 0x40059BA: Formula (solver.cpp:35)
+|         | ->04.64% (24,048B) 0x40059BA: is_sat (solver.cpp:297)
+|         |   ->04.64% (24,048B) 0x40059BA: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |     ->04.64% (24,048B) 0x4005D9E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|         |       ->04.64% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |         
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->14.22% (73,728B) 0x49268F6: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35)
+| ->14.22% (73,728B) 0x40107CE: call_init.part.0 (dl-init.c:74)
+|   ->14.22% (73,728B) 0x40108E3: call_init (dl-init.c:120)
+|     ->14.22% (73,728B) 0x40108E3: _dl_init (dl-init.c:121)
+|       ->14.22% (73,728B) 0x402D39F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->14.22% (73,728B) 0x2: ???
+|           ->14.22% (73,728B) 0x1FFEFFFDCA: ???
+|             ->14.22% (73,728B) 0x1FFEFFFDD3: ???
+|               ->14.22% (73,728B) 0x1FFEFFFDE1: ???
+|                 
+->11.57% (60,000B) 0x4003BC6: allocate (new_allocator.h:151)
+| ->11.57% (60,000B) 0x4003BC6: allocate (alloc_traits.h:614)
+|   ->11.57% (60,000B) 0x4003BC6: _M_allocate (stl_vector.h:387)
+|     ->11.57% (60,000B) 0x4003BC6: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int> > > (stl_vector.h:1910)
+|       ->11.57% (60,000B) 0x4003BC6: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (vector.tcc:238)
+|         ->06.94% (36,000B) in 9 places, all below massif's threshold (1.00%)
+|         | 
+|         ->01.54% (8,000B) 0x4006D01: Formula::Formula(Formula const&) (solver.cpp:34)
+|         | ->01.54% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.54% (8,000B) 0x4006D19: Formula::Formula(Formula const&) (solver.cpp:36)
+|         | ->01.54% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.54% (8,000B) 0x4006D25: Formula::Formula(Formula const&) (solver.cpp:37)
+|           ->01.54% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             
+->09.26% (48,000B) 0x4006818: allocate (new_allocator.h:151)
+| ->09.26% (48,000B) 0x4006818: allocate (alloc_traits.h:614)
+|   ->09.26% (48,000B) 0x4006818: _M_allocate (stl_vector.h:387)
+|     ->09.26% (48,000B) 0x4006818: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) (vector.tcc:845)
+|       ->09.26% (48,000B) 0x4004753: resize (stl_vector.h:1146)
+|         ->09.26% (48,000B) 0x4004753: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:117)
+|           ->04.63% (24,000B) 0x4003512: main (solver.cpp:372)
+|           | 
+|           ->04.63% (24,000B) 0x400354D: main (solver.cpp:373)
+|             
+->09.26% (48,000B) 0x400697D: allocate (new_allocator.h:151)
+| ->09.26% (48,000B) 0x400697D: allocate (alloc_traits.h:614)
+|   ->09.26% (48,000B) 0x400697D: _M_allocate (stl_vector.h:387)
+|     ->09.26% (48,000B) 0x400697D: void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (vector.tcc:572)
+|       ->09.26% (48,000B) 0x4005719: push_back (stl_vector.h:1427)
+|         ->09.26% (48,000B) 0x4005719: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:318)
+|           ->09.26% (48,000B) 0x4005D9E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|             ->09.26% (48,000B) 0x4003585: main (solver.cpp:377)
+|               
+->07.72% (40,016B) 0x4004D57: allocate (new_allocator.h:151)
+| ->07.72% (40,016B) 0x4004D57: allocate (alloc_traits.h:614)
+|   ->07.72% (40,016B) 0x4004D57: _M_allocate (stl_vector.h:387)
+|     ->07.72% (40,016B) 0x4004D57: _M_create_storage (stl_vector.h:405)
+|       ->07.72% (40,016B) 0x4004D57: _Vector_base (stl_vector.h:341)
+|         ->07.72% (40,016B) 0x4004D57: vector (stl_vector.h:633)
+|           ->07.72% (40,016B) 0x4004D57: _Construct<std::vector<int>, const std::vector<int, std::allocator<int> >&> (stl_construct.h:133)
+|             ->07.72% (40,016B) 0x4004D57: __do_uninit_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:145)
+|               ->07.72% (40,016B) 0x4004D57: uninitialized_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:266)
+|                 ->07.72% (40,016B) 0x4004D57: __uninitialized_copy_a<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*, std::vector<int> > (stl_uninitialized.h:637)
+|                   ->07.72% (40,016B) 0x4004D57: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1912)
+|                     ->07.72% (40,016B) 0x4004D57: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|                       ->03.09% (16,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|                       | ->01.54% (8,000B) 0x4003560: main (solver.cpp:377)
+|                       | | 
+|                       | ->01.54% (8,000B) 0x4003570: main (solver.cpp:377)
+|                       |   
+|                       ->01.54% (8,008B) 0x40058B3: Formula (solver.cpp:35)
+|                       | ->01.54% (8,008B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|                       |   ->01.54% (8,008B) 0x4005D9E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|                       |     ->01.54% (8,008B) 0x4003585: main (solver.cpp:377)
+|                       |       
+|                       ->01.54% (8,008B) 0x40059BA: Formula (solver.cpp:35)
+|                       | ->01.54% (8,008B) 0x40059BA: is_sat (solver.cpp:297)
+|                       |   ->01.54% (8,008B) 0x40059BA: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|                       |     ->01.54% (8,008B) 0x4005D9E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|                       |       ->01.54% (8,008B) 0x4003585: main (solver.cpp:377)
+|                       |         
+|                       ->01.54% (8,000B) 0x4005D5C: Formula (solver.cpp:35)
+|                         ->01.54% (8,000B) 0x4005D5C: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|                           ->01.54% (8,000B) 0x4003585: main (solver.cpp:377)
+|                             
+->04.63% (24,000B) 0x40065C3: allocate (new_allocator.h:151)
+| ->04.63% (24,000B) 0x40065C3: allocate (alloc_traits.h:614)
+|   ->04.63% (24,000B) 0x40065C3: _M_allocate (stl_vector.h:387)
+|     ->04.63% (24,000B) 0x40065C3: _M_create_storage (stl_vector.h:405)
+|       ->04.63% (24,000B) 0x40065C3: _Vector_base (stl_vector.h:341)
+|         ->04.63% (24,000B) 0x40065C3: vector (stl_vector.h:601)
+|           ->04.63% (24,000B) 0x40065C3: std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (vector.tcc:278)
+|             ->01.54% (8,000B) 0x400455A: assign (stl_vector.h:876)
+|             | ->01.54% (8,000B) 0x400455A: recalculate_stats (solver.cpp:42)
+|             |   ->01.54% (8,000B) 0x400455A: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.54% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.54% (8,000B) 0x4004573: assign (stl_vector.h:876)
+|             | ->01.54% (8,000B) 0x4004573: recalculate_stats (solver.cpp:43)
+|             |   ->01.54% (8,000B) 0x4004573: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.54% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.54% (8,000B) 0x400458C: assign (stl_vector.h:876)
+|               ->01.54% (8,000B) 0x400458C: recalculate_stats (solver.cpp:44)
+|                 ->01.54% (8,000B) 0x400458C: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|                   ->01.54% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|                     
+->03.09% (16,000B) 0x4006BEB: allocate (new_allocator.h:151)
+| ->03.09% (16,000B) 0x4006BEB: allocate (alloc_traits.h:614)
+|   ->03.09% (16,000B) 0x4006BEB: _M_allocate (stl_vector.h:387)
+|     ->03.09% (16,000B) 0x4006BEB: void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) (vector.tcc:572)
+|       ->03.09% (16,000B) 0x40044E9: emplace_back<int> (vector.tcc:123)
+|         ->03.09% (16,000B) 0x40044E9: push_back (stl_vector.h:1434)
+|           ->03.09% (16,000B) 0x40044E9: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:144)
+|             ->01.54% (8,000B) 0x4003512: main (solver.cpp:372)
+|             | 
+|             ->01.54% (8,000B) 0x400354D: main (solver.cpp:373)
+|               
+->00.04% (196B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  3            665          435,064          348,900        86,164            0
+  4            921          441,832          351,156        90,676            0
+  5          1,265          507,120          402,256       104,864            0
+  6          1,521          499,680          394,452       105,228            0
+  7          1,777          503,184          395,620       107,564            0
+  8          2,033          499,176          399,608        99,568            0
+80.05% (399,608B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->19.25% (96,096B) 0x4004D27: allocate (new_allocator.h:151)
+| ->19.25% (96,096B) 0x4004D27: allocate (alloc_traits.h:614)
+|   ->19.25% (96,096B) 0x4004D27: _M_allocate (stl_vector.h:387)
+|     ->19.25% (96,096B) 0x4004D27: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1910)
+|       ->19.25% (96,096B) 0x4004D27: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|         ->09.62% (48,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|         | ->04.81% (24,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->04.81% (24,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->04.82% (24,048B) 0x40058B3: Formula (solver.cpp:35)
+|         | ->04.82% (24,048B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |   ->04.82% (24,048B) 0x4005D9E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|         |     ->04.82% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |       
+|         ->04.82% (24,048B) 0x40059BA: Formula (solver.cpp:35)
+|         | ->04.82% (24,048B) 0x40059BA: is_sat (solver.cpp:297)
+|         |   ->04.82% (24,048B) 0x40059BA: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |     ->04.82% (24,048B) 0x4005D9E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|         |       ->04.82% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |         
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->14.77% (73,728B) 0x49268F6: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35)
+| ->14.77% (73,728B) 0x40107CE: call_init.part.0 (dl-init.c:74)
+|   ->14.77% (73,728B) 0x40108E3: call_init (dl-init.c:120)
+|     ->14.77% (73,728B) 0x40108E3: _dl_init (dl-init.c:121)
+|       ->14.77% (73,728B) 0x402D39F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->14.77% (73,728B) 0x2: ???
+|           ->14.77% (73,728B) 0x1FFEFFFDCA: ???
+|             ->14.77% (73,728B) 0x1FFEFFFDD3: ???
+|               ->14.77% (73,728B) 0x1FFEFFFDE1: ???
+|                 
+->12.02% (60,000B) 0x4003BC6: allocate (new_allocator.h:151)
+| ->12.02% (60,000B) 0x4003BC6: allocate (alloc_traits.h:614)
+|   ->12.02% (60,000B) 0x4003BC6: _M_allocate (stl_vector.h:387)
+|     ->12.02% (60,000B) 0x4003BC6: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int> > > (stl_vector.h:1910)
+|       ->12.02% (60,000B) 0x4003BC6: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (vector.tcc:238)
+|         ->07.21% (36,000B) in 9 places, all below massif's threshold (1.00%)
+|         | 
+|         ->01.60% (8,000B) 0x4006D01: Formula::Formula(Formula const&) (solver.cpp:34)
+|         | ->01.60% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.60% (8,000B) 0x4006D19: Formula::Formula(Formula const&) (solver.cpp:36)
+|         | ->01.60% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.60% (8,000B) 0x4006D25: Formula::Formula(Formula const&) (solver.cpp:37)
+|           ->01.60% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             
+->09.62% (48,000B) 0x4006818: allocate (new_allocator.h:151)
+| ->09.62% (48,000B) 0x4006818: allocate (alloc_traits.h:614)
+|   ->09.62% (48,000B) 0x4006818: _M_allocate (stl_vector.h:387)
+|     ->09.62% (48,000B) 0x4006818: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) (vector.tcc:845)
+|       ->09.62% (48,000B) 0x4004753: resize (stl_vector.h:1146)
+|         ->09.62% (48,000B) 0x4004753: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:117)
+|           ->04.81% (24,000B) 0x4003512: main (solver.cpp:372)
+|           | 
+|           ->04.81% (24,000B) 0x400354D: main (solver.cpp:373)
+|             
+->09.62% (48,000B) 0x400697D: allocate (new_allocator.h:151)
+| ->09.62% (48,000B) 0x400697D: allocate (alloc_traits.h:614)
+|   ->09.62% (48,000B) 0x400697D: _M_allocate (stl_vector.h:387)
+|     ->09.62% (48,000B) 0x400697D: void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (vector.tcc:572)
+|       ->09.62% (48,000B) 0x4005719: push_back (stl_vector.h:1427)
+|         ->09.62% (48,000B) 0x4005719: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:318)
+|           ->09.62% (48,000B) 0x4005D9E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|             ->09.62% (48,000B) 0x4003585: main (solver.cpp:377)
+|               
+->06.73% (33,588B) 0x4004D57: allocate (new_allocator.h:151)
+| ->06.73% (33,588B) 0x4004D57: allocate (alloc_traits.h:614)
+|   ->06.73% (33,588B) 0x4004D57: _M_allocate (stl_vector.h:387)
+|     ->06.73% (33,588B) 0x4004D57: _M_create_storage (stl_vector.h:405)
+|       ->06.73% (33,588B) 0x4004D57: _Vector_base (stl_vector.h:341)
+|         ->06.73% (33,588B) 0x4004D57: vector (stl_vector.h:633)
+|           ->06.73% (33,588B) 0x4004D57: _Construct<std::vector<int>, const std::vector<int, std::allocator<int> >&> (stl_construct.h:133)
+|             ->06.73% (33,588B) 0x4004D57: __do_uninit_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:145)
+|               ->06.73% (33,588B) 0x4004D57: uninitialized_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:266)
+|                 ->06.73% (33,588B) 0x4004D57: __uninitialized_copy_a<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*, std::vector<int> > (stl_uninitialized.h:637)
+|                   ->06.73% (33,588B) 0x4004D57: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1912)
+|                     ->06.73% (33,588B) 0x4004D57: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|                       ->03.21% (16,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|                       | ->01.60% (8,000B) 0x4003560: main (solver.cpp:377)
+|                       | | 
+|                       | ->01.60% (8,000B) 0x4003570: main (solver.cpp:377)
+|                       |   
+|                       ->01.60% (8,008B) 0x40058B3: Formula (solver.cpp:35)
+|                       | ->01.60% (8,008B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|                       |   ->01.60% (8,008B) 0x4005D9E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|                       |     ->01.60% (8,008B) 0x4003585: main (solver.cpp:377)
+|                       |       
+|                       ->01.60% (8,000B) 0x4005D5C: Formula (solver.cpp:35)
+|                       | ->01.60% (8,000B) 0x4005D5C: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|                       |   ->01.60% (8,000B) 0x4003585: main (solver.cpp:377)
+|                       |     
+|                       ->00.32% (1,580B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       
+->04.81% (24,000B) 0x40065C3: allocate (new_allocator.h:151)
+| ->04.81% (24,000B) 0x40065C3: allocate (alloc_traits.h:614)
+|   ->04.81% (24,000B) 0x40065C3: _M_allocate (stl_vector.h:387)
+|     ->04.81% (24,000B) 0x40065C3: _M_create_storage (stl_vector.h:405)
+|       ->04.81% (24,000B) 0x40065C3: _Vector_base (stl_vector.h:341)
+|         ->04.81% (24,000B) 0x40065C3: vector (stl_vector.h:601)
+|           ->04.81% (24,000B) 0x40065C3: std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (vector.tcc:278)
+|             ->01.60% (8,000B) 0x400455A: assign (stl_vector.h:876)
+|             | ->01.60% (8,000B) 0x400455A: recalculate_stats (solver.cpp:42)
+|             |   ->01.60% (8,000B) 0x400455A: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.60% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.60% (8,000B) 0x4004573: assign (stl_vector.h:876)
+|             | ->01.60% (8,000B) 0x4004573: recalculate_stats (solver.cpp:43)
+|             |   ->01.60% (8,000B) 0x4004573: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.60% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.60% (8,000B) 0x400458C: assign (stl_vector.h:876)
+|               ->01.60% (8,000B) 0x400458C: recalculate_stats (solver.cpp:44)
+|                 ->01.60% (8,000B) 0x400458C: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|                   ->01.60% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|                     
+->03.21% (16,000B) 0x4006BEB: allocate (new_allocator.h:151)
+| ->03.21% (16,000B) 0x4006BEB: allocate (alloc_traits.h:614)
+|   ->03.21% (16,000B) 0x4006BEB: _M_allocate (stl_vector.h:387)
+|     ->03.21% (16,000B) 0x4006BEB: void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) (vector.tcc:572)
+|       ->03.21% (16,000B) 0x40044E9: emplace_back<int> (vector.tcc:123)
+|         ->03.21% (16,000B) 0x40044E9: push_back (stl_vector.h:1434)
+|           ->03.21% (16,000B) 0x40044E9: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:144)
+|             ->01.60% (8,000B) 0x4003512: main (solver.cpp:372)
+|             | 
+|             ->01.60% (8,000B) 0x400354D: main (solver.cpp:373)
+|               
+->00.04% (196B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  9          2,289          355,640          282,412        73,228            0
+ 10          2,545          497,472          399,040        98,432            0
+ 11          2,801          500,832          400,160       100,672            0
+ 12          3,057          439,072          350,236        88,836            0
+ 13          3,313          345,728          279,108        66,620            0
+ 14          3,569          490,992          391,556        99,436            0
+ 15          3,965          501,600          400,416       101,184            0
+ 16          4,365          386,384          313,980        72,404            0
+ 17          4,765          498,336          394,004       104,332            0
+ 18          4,965          343,736          278,444        65,292            0
+ 19          5,165          442,624          356,740        85,884            0
+ 20          5,365          488,544          390,740        97,804            0
+ 21          5,565          386,216          313,924        72,292            0
+81.28% (313,924B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->19.09% (73,728B) 0x49268F6: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35)
+| ->19.09% (73,728B) 0x40107CE: call_init.part.0 (dl-init.c:74)
+|   ->19.09% (73,728B) 0x40108E3: call_init (dl-init.c:120)
+|     ->19.09% (73,728B) 0x40108E3: _dl_init (dl-init.c:121)
+|       ->19.09% (73,728B) 0x402D39F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->19.09% (73,728B) 0x2: ???
+|           ->19.09% (73,728B) 0x1FFEFFFDCA: ???
+|             ->19.09% (73,728B) 0x1FFEFFFDD3: ???
+|               ->19.09% (73,728B) 0x1FFEFFFDE1: ???
+|                 
+->12.43% (48,000B) 0x4004D27: allocate (new_allocator.h:151)
+| ->12.43% (48,000B) 0x4004D27: allocate (alloc_traits.h:614)
+|   ->12.43% (48,000B) 0x4004D27: _M_allocate (stl_vector.h:387)
+|     ->12.43% (48,000B) 0x4004D27: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1910)
+|       ->12.43% (48,000B) 0x4004D27: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|         ->12.43% (48,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|         | ->06.21% (24,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->06.21% (24,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->12.43% (48,000B) 0x4006818: allocate (new_allocator.h:151)
+| ->12.43% (48,000B) 0x4006818: allocate (alloc_traits.h:614)
+|   ->12.43% (48,000B) 0x4006818: _M_allocate (stl_vector.h:387)
+|     ->12.43% (48,000B) 0x4006818: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) (vector.tcc:845)
+|       ->12.43% (48,000B) 0x4004753: resize (stl_vector.h:1146)
+|         ->12.43% (48,000B) 0x4004753: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:117)
+|           ->06.21% (24,000B) 0x4003512: main (solver.cpp:372)
+|           | 
+|           ->06.21% (24,000B) 0x400354D: main (solver.cpp:373)
+|             
+->12.43% (48,000B) 0x400697D: allocate (new_allocator.h:151)
+| ->12.43% (48,000B) 0x400697D: allocate (alloc_traits.h:614)
+|   ->12.43% (48,000B) 0x400697D: _M_allocate (stl_vector.h:387)
+|     ->12.43% (48,000B) 0x400697D: void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (vector.tcc:572)
+|       ->12.43% (48,000B) 0x4005719: push_back (stl_vector.h:1427)
+|         ->12.43% (48,000B) 0x4005719: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:318)
+|           ->12.43% (48,000B) 0x4005D9E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|             ->12.43% (48,000B) 0x4003585: main (solver.cpp:377)
+|               
+->09.32% (36,000B) 0x4003BC6: allocate (new_allocator.h:151)
+| ->09.32% (36,000B) 0x4003BC6: allocate (alloc_traits.h:614)
+|   ->09.32% (36,000B) 0x4003BC6: _M_allocate (stl_vector.h:387)
+|     ->09.32% (36,000B) 0x4003BC6: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int> > > (stl_vector.h:1910)
+|       ->09.32% (36,000B) 0x4003BC6: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (vector.tcc:238)
+|         ->02.07% (8,000B) 0x4006D01: Formula::Formula(Formula const&) (solver.cpp:34)
+|         | ->01.04% (4,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->01.04% (4,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->02.07% (8,000B) 0x4006D19: Formula::Formula(Formula const&) (solver.cpp:36)
+|         | ->01.04% (4,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->01.04% (4,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->02.07% (8,000B) 0x4006D25: Formula::Formula(Formula const&) (solver.cpp:37)
+|         | ->01.04% (4,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->01.04% (4,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->01.04% (4,000B) 0x4005D43: Formula (solver.cpp:34)
+|         | ->01.04% (4,000B) 0x4005D43: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|         |   ->01.04% (4,000B) 0x4003585: main (solver.cpp:377)
+|         |     
+|         ->01.04% (4,000B) 0x4005D70: Formula (solver.cpp:36)
+|         | ->01.04% (4,000B) 0x4005D70: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|         |   ->01.04% (4,000B) 0x4003585: main (solver.cpp:377)
+|         |     
+|         ->01.04% (4,000B) 0x4005D84: Formula (solver.cpp:37)
+|         | ->01.04% (4,000B) 0x4005D84: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|         |   ->01.04% (4,000B) 0x4003585: main (solver.cpp:377)
+|         |     
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->06.21% (24,000B) 0x40065C3: allocate (new_allocator.h:151)
+| ->06.21% (24,000B) 0x40065C3: allocate (alloc_traits.h:614)
+|   ->06.21% (24,000B) 0x40065C3: _M_allocate (stl_vector.h:387)
+|     ->06.21% (24,000B) 0x40065C3: _M_create_storage (stl_vector.h:405)
+|       ->06.21% (24,000B) 0x40065C3: _Vector_base (stl_vector.h:341)
+|         ->06.21% (24,000B) 0x40065C3: vector (stl_vector.h:601)
+|           ->06.21% (24,000B) 0x40065C3: std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (vector.tcc:278)
+|             ->02.07% (8,000B) 0x400455A: assign (stl_vector.h:876)
+|             | ->02.07% (8,000B) 0x400455A: recalculate_stats (solver.cpp:42)
+|             |   ->02.07% (8,000B) 0x400455A: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.04% (4,000B) 0x4003512: main (solver.cpp:372)
+|             |     | 
+|             |     ->01.04% (4,000B) 0x400354D: main (solver.cpp:373)
+|             |       
+|             ->02.07% (8,000B) 0x4004573: assign (stl_vector.h:876)
+|             | ->02.07% (8,000B) 0x4004573: recalculate_stats (solver.cpp:43)
+|             |   ->02.07% (8,000B) 0x4004573: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.04% (4,000B) 0x4003512: main (solver.cpp:372)
+|             |     | 
+|             |     ->01.04% (4,000B) 0x400354D: main (solver.cpp:373)
+|             |       
+|             ->02.07% (8,000B) 0x400458C: assign (stl_vector.h:876)
+|               ->02.07% (8,000B) 0x400458C: recalculate_stats (solver.cpp:44)
+|                 ->02.07% (8,000B) 0x400458C: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|                   ->01.04% (4,000B) 0x4003512: main (solver.cpp:372)
+|                   | 
+|                   ->01.04% (4,000B) 0x400354D: main (solver.cpp:373)
+|                     
+->05.18% (20,000B) 0x4004D57: allocate (new_allocator.h:151)
+| ->05.18% (20,000B) 0x4004D57: allocate (alloc_traits.h:614)
+|   ->05.18% (20,000B) 0x4004D57: _M_allocate (stl_vector.h:387)
+|     ->05.18% (20,000B) 0x4004D57: _M_create_storage (stl_vector.h:405)
+|       ->05.18% (20,000B) 0x4004D57: _Vector_base (stl_vector.h:341)
+|         ->05.18% (20,000B) 0x4004D57: vector (stl_vector.h:633)
+|           ->05.18% (20,000B) 0x4004D57: _Construct<std::vector<int>, const std::vector<int, std::allocator<int> >&> (stl_construct.h:133)
+|             ->05.18% (20,000B) 0x4004D57: __do_uninit_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:145)
+|               ->05.18% (20,000B) 0x4004D57: uninitialized_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:266)
+|                 ->05.18% (20,000B) 0x4004D57: __uninitialized_copy_a<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*, std::vector<int> > (stl_uninitialized.h:637)
+|                   ->05.18% (20,000B) 0x4004D57: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1912)
+|                     ->05.18% (20,000B) 0x4004D57: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|                       ->04.14% (16,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|                       | ->02.07% (8,000B) 0x4003560: main (solver.cpp:377)
+|                       | | 
+|                       | ->02.07% (8,000B) 0x4003570: main (solver.cpp:377)
+|                       |   
+|                       ->01.04% (4,000B) 0x4005D5C: Formula (solver.cpp:35)
+|                       | ->01.04% (4,000B) 0x4005D5C: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:339)
+|                       |   ->01.04% (4,000B) 0x4003585: main (solver.cpp:377)
+|                       |     
+|                       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       
+->04.14% (16,000B) 0x4006BEB: allocate (new_allocator.h:151)
+| ->04.14% (16,000B) 0x4006BEB: allocate (alloc_traits.h:614)
+|   ->04.14% (16,000B) 0x4006BEB: _M_allocate (stl_vector.h:387)
+|     ->04.14% (16,000B) 0x4006BEB: void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) (vector.tcc:572)
+|       ->04.14% (16,000B) 0x40044E9: emplace_back<int> (vector.tcc:123)
+|         ->04.14% (16,000B) 0x40044E9: push_back (stl_vector.h:1434)
+|           ->04.14% (16,000B) 0x40044E9: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:144)
+|             ->02.07% (8,000B) 0x4003512: main (solver.cpp:372)
+|             | 
+|             ->02.07% (8,000B) 0x400354D: main (solver.cpp:373)
+|               
+->00.05% (196B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 22          5,765          496,080          393,252       102,828            0
+ 23          5,965          378,104          311,220        66,884            0
+ 24          6,165          443,080          356,892        86,188            0
+ 25          6,365          496,272          393,316       102,956            0
+ 26          6,565          426,592          346,076        80,516            0
+81.13% (346,076B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->17.28% (73,728B) 0x49268F6: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35)
+| ->17.28% (73,728B) 0x40107CE: call_init.part.0 (dl-init.c:74)
+|   ->17.28% (73,728B) 0x40108E3: call_init (dl-init.c:120)
+|     ->17.28% (73,728B) 0x40108E3: _dl_init (dl-init.c:121)
+|       ->17.28% (73,728B) 0x402D39F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->17.28% (73,728B) 0x2: ???
+|           ->17.28% (73,728B) 0x1FFEFFFDCA: ???
+|             ->17.28% (73,728B) 0x1FFEFFFDD3: ???
+|               ->17.28% (73,728B) 0x1FFEFFFDE1: ???
+|                 
+->16.89% (72,048B) 0x4004D27: allocate (new_allocator.h:151)
+| ->16.89% (72,048B) 0x4004D27: allocate (alloc_traits.h:614)
+|   ->16.89% (72,048B) 0x4004D27: _M_allocate (stl_vector.h:387)
+|     ->16.89% (72,048B) 0x4004D27: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1910)
+|       ->16.89% (72,048B) 0x4004D27: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|         ->11.25% (48,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|         | ->05.63% (24,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->05.63% (24,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->05.64% (24,048B) 0x40058B3: Formula (solver.cpp:35)
+|         | ->05.64% (24,048B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |   ->05.64% (24,048B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |   | ->05.64% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |   |   
+|         |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         |   
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->11.25% (48,000B) 0x4006818: allocate (new_allocator.h:151)
+| ->11.25% (48,000B) 0x4006818: allocate (alloc_traits.h:614)
+|   ->11.25% (48,000B) 0x4006818: _M_allocate (stl_vector.h:387)
+|     ->11.25% (48,000B) 0x4006818: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) (vector.tcc:845)
+|       ->11.25% (48,000B) 0x4004753: resize (stl_vector.h:1146)
+|         ->11.25% (48,000B) 0x4004753: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:117)
+|           ->05.63% (24,000B) 0x4003512: main (solver.cpp:372)
+|           | 
+|           ->05.63% (24,000B) 0x400354D: main (solver.cpp:373)
+|             
+->11.25% (48,000B) 0x400697D: allocate (new_allocator.h:151)
+| ->11.25% (48,000B) 0x400697D: allocate (alloc_traits.h:614)
+|   ->11.25% (48,000B) 0x400697D: _M_allocate (stl_vector.h:387)
+|     ->11.25% (48,000B) 0x400697D: void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (vector.tcc:572)
+|       ->11.25% (48,000B) 0x4005719: push_back (stl_vector.h:1427)
+|         ->11.25% (48,000B) 0x4005719: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:318)
+|           ->11.25% (48,000B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|           | ->11.25% (48,000B) 0x4003585: main (solver.cpp:377)
+|           |   
+|           ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|           
+->09.38% (40,000B) 0x4003BC6: allocate (new_allocator.h:151)
+| ->09.38% (40,000B) 0x4003BC6: allocate (alloc_traits.h:614)
+|   ->09.38% (40,000B) 0x4003BC6: _M_allocate (stl_vector.h:387)
+|     ->09.38% (40,000B) 0x4003BC6: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int> > > (stl_vector.h:1910)
+|       ->09.38% (40,000B) 0x4003BC6: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (vector.tcc:238)
+|         ->03.75% (16,000B) in 12 places, all below massif's threshold (1.00%)
+|         | 
+|         ->01.88% (8,000B) 0x4006D01: Formula::Formula(Formula const&) (solver.cpp:34)
+|         | ->01.88% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.88% (8,000B) 0x4006D19: Formula::Formula(Formula const&) (solver.cpp:36)
+|         | ->01.88% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.88% (8,000B) 0x4006D25: Formula::Formula(Formula const&) (solver.cpp:37)
+|           ->01.88% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             
+->05.65% (24,104B) 0x4004D57: allocate (new_allocator.h:151)
+| ->05.65% (24,104B) 0x4004D57: allocate (alloc_traits.h:614)
+|   ->05.65% (24,104B) 0x4004D57: _M_allocate (stl_vector.h:387)
+|     ->05.65% (24,104B) 0x4004D57: _M_create_storage (stl_vector.h:405)
+|       ->05.65% (24,104B) 0x4004D57: _Vector_base (stl_vector.h:341)
+|         ->05.65% (24,104B) 0x4004D57: vector (stl_vector.h:633)
+|           ->05.65% (24,104B) 0x4004D57: _Construct<std::vector<int>, const std::vector<int, std::allocator<int> >&> (stl_construct.h:133)
+|             ->05.65% (24,104B) 0x4004D57: __do_uninit_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:145)
+|               ->05.65% (24,104B) 0x4004D57: uninitialized_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:266)
+|                 ->05.65% (24,104B) 0x4004D57: __uninitialized_copy_a<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*, std::vector<int> > (stl_uninitialized.h:637)
+|                   ->05.65% (24,104B) 0x4004D57: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1912)
+|                     ->05.65% (24,104B) 0x4004D57: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|                       ->03.75% (16,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|                       | ->01.88% (8,000B) 0x4003560: main (solver.cpp:377)
+|                       | | 
+|                       | ->01.88% (8,000B) 0x4003570: main (solver.cpp:377)
+|                       |   
+|                       ->01.88% (8,000B) 0x4005FEC: Formula (solver.cpp:35)
+|                       | ->01.88% (8,000B) 0x4005FEC: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|                       |   ->01.88% (8,000B) 0x4003585: main (solver.cpp:377)
+|                       |     
+|                       ->00.02% (104B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       
+->05.63% (24,000B) 0x40065C3: allocate (new_allocator.h:151)
+| ->05.63% (24,000B) 0x40065C3: allocate (alloc_traits.h:614)
+|   ->05.63% (24,000B) 0x40065C3: _M_allocate (stl_vector.h:387)
+|     ->05.63% (24,000B) 0x40065C3: _M_create_storage (stl_vector.h:405)
+|       ->05.63% (24,000B) 0x40065C3: _Vector_base (stl_vector.h:341)
+|         ->05.63% (24,000B) 0x40065C3: vector (stl_vector.h:601)
+|           ->05.63% (24,000B) 0x40065C3: std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (vector.tcc:278)
+|             ->01.88% (8,000B) 0x400455A: assign (stl_vector.h:876)
+|             | ->01.88% (8,000B) 0x400455A: recalculate_stats (solver.cpp:42)
+|             |   ->01.88% (8,000B) 0x400455A: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.88% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.88% (8,000B) 0x4004573: assign (stl_vector.h:876)
+|             | ->01.88% (8,000B) 0x4004573: recalculate_stats (solver.cpp:43)
+|             |   ->01.88% (8,000B) 0x4004573: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.88% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.88% (8,000B) 0x400458C: assign (stl_vector.h:876)
+|               ->01.88% (8,000B) 0x400458C: recalculate_stats (solver.cpp:44)
+|                 ->01.88% (8,000B) 0x400458C: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|                   ->01.88% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|                     
+->03.75% (16,000B) 0x4006BEB: allocate (new_allocator.h:151)
+| ->03.75% (16,000B) 0x4006BEB: allocate (alloc_traits.h:614)
+|   ->03.75% (16,000B) 0x4006BEB: _M_allocate (stl_vector.h:387)
+|     ->03.75% (16,000B) 0x4006BEB: void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) (vector.tcc:572)
+|       ->03.75% (16,000B) 0x40044E9: emplace_back<int> (vector.tcc:123)
+|         ->03.75% (16,000B) 0x40044E9: push_back (stl_vector.h:1434)
+|           ->03.75% (16,000B) 0x40044E9: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:144)
+|             ->01.88% (8,000B) 0x4003512: main (solver.cpp:372)
+|             | 
+|             ->01.88% (8,000B) 0x400354D: main (solver.cpp:373)
+|               
+->00.05% (196B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 27          6,765          384,584          313,380        71,204            0
+ 28          6,965          508,032          402,560       105,472            0
+ 29          7,165          441,040          350,892        90,148            0
+ 30          7,365          344,576          278,724        65,852            0
+ 31          7,565          439,696          355,764        83,932            0
+80.91% (355,764B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->16.77% (73,728B) 0x49268F6: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35)
+| ->16.77% (73,728B) 0x40107CE: call_init.part.0 (dl-init.c:74)
+|   ->16.77% (73,728B) 0x40108E3: call_init (dl-init.c:120)
+|     ->16.77% (73,728B) 0x40108E3: _dl_init (dl-init.c:121)
+|       ->16.77% (73,728B) 0x402D39F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->16.77% (73,728B) 0x2: ???
+|           ->16.77% (73,728B) 0x1FFEFFFDCA: ???
+|             ->16.77% (73,728B) 0x1FFEFFFDD3: ???
+|               ->16.77% (73,728B) 0x1FFEFFFDE1: ???
+|                 
+->16.39% (72,048B) 0x4004D27: allocate (new_allocator.h:151)
+| ->16.39% (72,048B) 0x4004D27: allocate (alloc_traits.h:614)
+|   ->16.39% (72,048B) 0x4004D27: _M_allocate (stl_vector.h:387)
+|     ->16.39% (72,048B) 0x4004D27: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1910)
+|       ->16.39% (72,048B) 0x4004D27: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|         ->10.92% (48,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|         | ->05.46% (24,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->05.46% (24,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->05.47% (24,048B) 0x40058B3: Formula (solver.cpp:35)
+|         | ->05.47% (24,048B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |   ->05.47% (24,048B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |   | ->05.47% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |   |   
+|         |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         |   
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->10.92% (48,000B) 0x4003BC6: allocate (new_allocator.h:151)
+| ->10.92% (48,000B) 0x4003BC6: allocate (alloc_traits.h:614)
+|   ->10.92% (48,000B) 0x4003BC6: _M_allocate (stl_vector.h:387)
+|     ->10.92% (48,000B) 0x4003BC6: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int> > > (stl_vector.h:1910)
+|       ->10.92% (48,000B) 0x4003BC6: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (vector.tcc:238)
+|         ->05.46% (24,000B) in 12 places, all below massif's threshold (1.00%)
+|         | 
+|         ->01.82% (8,000B) 0x4006D01: Formula::Formula(Formula const&) (solver.cpp:34)
+|         | ->01.82% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.82% (8,000B) 0x4006D19: Formula::Formula(Formula const&) (solver.cpp:36)
+|         | ->01.82% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.82% (8,000B) 0x4006D25: Formula::Formula(Formula const&) (solver.cpp:37)
+|           ->01.82% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             
+->10.92% (48,000B) 0x4006818: allocate (new_allocator.h:151)
+| ->10.92% (48,000B) 0x4006818: allocate (alloc_traits.h:614)
+|   ->10.92% (48,000B) 0x4006818: _M_allocate (stl_vector.h:387)
+|     ->10.92% (48,000B) 0x4006818: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) (vector.tcc:845)
+|       ->10.92% (48,000B) 0x4004753: resize (stl_vector.h:1146)
+|         ->10.92% (48,000B) 0x4004753: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:117)
+|           ->05.46% (24,000B) 0x4003512: main (solver.cpp:372)
+|           | 
+|           ->05.46% (24,000B) 0x400354D: main (solver.cpp:373)
+|             
+->10.92% (48,000B) 0x400697D: allocate (new_allocator.h:151)
+| ->10.92% (48,000B) 0x400697D: allocate (alloc_traits.h:614)
+|   ->10.92% (48,000B) 0x400697D: _M_allocate (stl_vector.h:387)
+|     ->10.92% (48,000B) 0x400697D: void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (vector.tcc:572)
+|       ->10.92% (48,000B) 0x4005719: push_back (stl_vector.h:1427)
+|         ->10.92% (48,000B) 0x4005719: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:318)
+|           ->10.92% (48,000B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|           | ->10.92% (48,000B) 0x4003585: main (solver.cpp:377)
+|           |   
+|           ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|           
+->05.87% (25,792B) 0x4004D57: allocate (new_allocator.h:151)
+| ->05.87% (25,792B) 0x4004D57: allocate (alloc_traits.h:614)
+|   ->05.87% (25,792B) 0x4004D57: _M_allocate (stl_vector.h:387)
+|     ->05.87% (25,792B) 0x4004D57: _M_create_storage (stl_vector.h:405)
+|       ->05.87% (25,792B) 0x4004D57: _Vector_base (stl_vector.h:341)
+|         ->05.87% (25,792B) 0x4004D57: vector (stl_vector.h:633)
+|           ->05.87% (25,792B) 0x4004D57: _Construct<std::vector<int>, const std::vector<int, std::allocator<int> >&> (stl_construct.h:133)
+|             ->05.87% (25,792B) 0x4004D57: __do_uninit_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:145)
+|               ->05.87% (25,792B) 0x4004D57: uninitialized_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:266)
+|                 ->05.87% (25,792B) 0x4004D57: __uninitialized_copy_a<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*, std::vector<int> > (stl_uninitialized.h:637)
+|                   ->05.87% (25,792B) 0x4004D57: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1912)
+|                     ->05.87% (25,792B) 0x4004D57: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|                       ->03.64% (16,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|                       | ->01.82% (8,000B) 0x4003560: main (solver.cpp:377)
+|                       | | 
+|                       | ->01.82% (8,000B) 0x4003570: main (solver.cpp:377)
+|                       |   
+|                       ->01.82% (8,000B) 0x4005FEC: Formula (solver.cpp:35)
+|                       | ->01.82% (8,000B) 0x4005FEC: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|                       |   ->01.82% (8,000B) 0x4003585: main (solver.cpp:377)
+|                       |     
+|                       ->00.41% (1,792B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       
+->05.46% (24,000B) 0x40065C3: allocate (new_allocator.h:151)
+| ->05.46% (24,000B) 0x40065C3: allocate (alloc_traits.h:614)
+|   ->05.46% (24,000B) 0x40065C3: _M_allocate (stl_vector.h:387)
+|     ->05.46% (24,000B) 0x40065C3: _M_create_storage (stl_vector.h:405)
+|       ->05.46% (24,000B) 0x40065C3: _Vector_base (stl_vector.h:341)
+|         ->05.46% (24,000B) 0x40065C3: vector (stl_vector.h:601)
+|           ->05.46% (24,000B) 0x40065C3: std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (vector.tcc:278)
+|             ->01.82% (8,000B) 0x400455A: assign (stl_vector.h:876)
+|             | ->01.82% (8,000B) 0x400455A: recalculate_stats (solver.cpp:42)
+|             |   ->01.82% (8,000B) 0x400455A: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.82% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.82% (8,000B) 0x4004573: assign (stl_vector.h:876)
+|             | ->01.82% (8,000B) 0x4004573: recalculate_stats (solver.cpp:43)
+|             |   ->01.82% (8,000B) 0x4004573: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.82% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.82% (8,000B) 0x400458C: assign (stl_vector.h:876)
+|               ->01.82% (8,000B) 0x400458C: recalculate_stats (solver.cpp:44)
+|                 ->01.82% (8,000B) 0x400458C: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|                   ->01.82% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|                     
+->03.64% (16,000B) 0x4006BEB: allocate (new_allocator.h:151)
+| ->03.64% (16,000B) 0x4006BEB: allocate (alloc_traits.h:614)
+|   ->03.64% (16,000B) 0x4006BEB: _M_allocate (stl_vector.h:387)
+|     ->03.64% (16,000B) 0x4006BEB: void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) (vector.tcc:572)
+|       ->03.64% (16,000B) 0x40044E9: emplace_back<int> (vector.tcc:123)
+|         ->03.64% (16,000B) 0x40044E9: push_back (stl_vector.h:1434)
+|           ->03.64% (16,000B) 0x40044E9: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:144)
+|             ->01.82% (8,000B) 0x4003512: main (solver.cpp:372)
+|             | 
+|             ->01.82% (8,000B) 0x400354D: main (solver.cpp:373)
+|               
+->00.04% (196B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 32          7,765          506,664          402,104       104,560            0
+ 33          7,965          434,344          348,660        85,684            0
+ 34          8,165          376,328          310,628        65,700            0
+ 35          8,365          437,704          355,100        82,604            0
+ 36          8,565          498,384          399,344        99,040            0
+80.13% (399,344B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->19.28% (96,096B) 0x4004D27: allocate (new_allocator.h:151)
+| ->19.28% (96,096B) 0x4004D27: allocate (alloc_traits.h:614)
+|   ->19.28% (96,096B) 0x4004D27: _M_allocate (stl_vector.h:387)
+|     ->19.28% (96,096B) 0x4004D27: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1910)
+|       ->19.28% (96,096B) 0x4004D27: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|         ->09.63% (48,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|         | ->04.82% (24,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->04.82% (24,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->04.83% (24,048B) 0x40058B3: Formula (solver.cpp:35)
+|         | ->04.83% (24,048B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |   ->04.83% (24,048B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |   | ->04.83% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |   |   
+|         |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         |   
+|         ->04.83% (24,048B) 0x40059BA: Formula (solver.cpp:35)
+|         | ->04.83% (24,048B) 0x40059BA: is_sat (solver.cpp:297)
+|         |   ->04.83% (24,048B) 0x40059BA: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |     ->04.83% (24,048B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |     | ->04.83% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |     |   
+|         |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         |     
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->14.79% (73,728B) 0x49268F6: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35)
+| ->14.79% (73,728B) 0x40107CE: call_init.part.0 (dl-init.c:74)
+|   ->14.79% (73,728B) 0x40108E3: call_init (dl-init.c:120)
+|     ->14.79% (73,728B) 0x40108E3: _dl_init (dl-init.c:121)
+|       ->14.79% (73,728B) 0x402D39F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->14.79% (73,728B) 0x2: ???
+|           ->14.79% (73,728B) 0x1FFEFFFDCA: ???
+|             ->14.79% (73,728B) 0x1FFEFFFDD3: ???
+|               ->14.79% (73,728B) 0x1FFEFFFDE1: ???
+|                 
+->12.04% (60,000B) 0x4003BC6: allocate (new_allocator.h:151)
+| ->12.04% (60,000B) 0x4003BC6: allocate (alloc_traits.h:614)
+|   ->12.04% (60,000B) 0x4003BC6: _M_allocate (stl_vector.h:387)
+|     ->12.04% (60,000B) 0x4003BC6: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int> > > (stl_vector.h:1910)
+|       ->12.04% (60,000B) 0x4003BC6: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (vector.tcc:238)
+|         ->07.22% (36,000B) in 12 places, all below massif's threshold (1.00%)
+|         | 
+|         ->01.61% (8,000B) 0x4006D01: Formula::Formula(Formula const&) (solver.cpp:34)
+|         | ->01.61% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.61% (8,000B) 0x4006D19: Formula::Formula(Formula const&) (solver.cpp:36)
+|         | ->01.61% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.61% (8,000B) 0x4006D25: Formula::Formula(Formula const&) (solver.cpp:37)
+|           ->01.61% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             
+->09.63% (48,000B) 0x4006818: allocate (new_allocator.h:151)
+| ->09.63% (48,000B) 0x4006818: allocate (alloc_traits.h:614)
+|   ->09.63% (48,000B) 0x4006818: _M_allocate (stl_vector.h:387)
+|     ->09.63% (48,000B) 0x4006818: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) (vector.tcc:845)
+|       ->09.63% (48,000B) 0x4004753: resize (stl_vector.h:1146)
+|         ->09.63% (48,000B) 0x4004753: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:117)
+|           ->04.82% (24,000B) 0x4003512: main (solver.cpp:372)
+|           | 
+|           ->04.82% (24,000B) 0x400354D: main (solver.cpp:373)
+|             
+->09.63% (48,000B) 0x400697D: allocate (new_allocator.h:151)
+| ->09.63% (48,000B) 0x400697D: allocate (alloc_traits.h:614)
+|   ->09.63% (48,000B) 0x400697D: _M_allocate (stl_vector.h:387)
+|     ->09.63% (48,000B) 0x400697D: void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (vector.tcc:572)
+|       ->09.63% (48,000B) 0x4005719: push_back (stl_vector.h:1427)
+|         ->09.63% (48,000B) 0x4005719: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:318)
+|           ->09.63% (48,000B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|           | ->09.63% (48,000B) 0x4003585: main (solver.cpp:377)
+|           |   
+|           ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|           
+->06.69% (33,324B) 0x4004D57: allocate (new_allocator.h:151)
+| ->06.69% (33,324B) 0x4004D57: allocate (alloc_traits.h:614)
+|   ->06.69% (33,324B) 0x4004D57: _M_allocate (stl_vector.h:387)
+|     ->06.69% (33,324B) 0x4004D57: _M_create_storage (stl_vector.h:405)
+|       ->06.69% (33,324B) 0x4004D57: _Vector_base (stl_vector.h:341)
+|         ->06.69% (33,324B) 0x4004D57: vector (stl_vector.h:633)
+|           ->06.69% (33,324B) 0x4004D57: _Construct<std::vector<int>, const std::vector<int, std::allocator<int> >&> (stl_construct.h:133)
+|             ->06.69% (33,324B) 0x4004D57: __do_uninit_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:145)
+|               ->06.69% (33,324B) 0x4004D57: uninitialized_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:266)
+|                 ->06.69% (33,324B) 0x4004D57: __uninitialized_copy_a<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*, std::vector<int> > (stl_uninitialized.h:637)
+|                   ->06.69% (33,324B) 0x4004D57: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1912)
+|                     ->06.69% (33,324B) 0x4004D57: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|                       ->03.21% (16,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|                       | ->01.61% (8,000B) 0x4003560: main (solver.cpp:377)
+|                       | | 
+|                       | ->01.61% (8,000B) 0x4003570: main (solver.cpp:377)
+|                       |   
+|                       ->01.61% (8,008B) 0x40058B3: Formula (solver.cpp:35)
+|                       | ->01.61% (8,008B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|                       |   ->01.61% (8,008B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|                       |   | ->01.61% (8,008B) 0x4003585: main (solver.cpp:377)
+|                       |   |   
+|                       |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       |   
+|                       ->01.61% (8,000B) 0x4005FEC: Formula (solver.cpp:35)
+|                       | ->01.61% (8,000B) 0x4005FEC: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|                       |   ->01.61% (8,000B) 0x4003585: main (solver.cpp:377)
+|                       |     
+|                       ->00.26% (1,316B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       
+->04.82% (24,000B) 0x40065C3: allocate (new_allocator.h:151)
+| ->04.82% (24,000B) 0x40065C3: allocate (alloc_traits.h:614)
+|   ->04.82% (24,000B) 0x40065C3: _M_allocate (stl_vector.h:387)
+|     ->04.82% (24,000B) 0x40065C3: _M_create_storage (stl_vector.h:405)
+|       ->04.82% (24,000B) 0x40065C3: _Vector_base (stl_vector.h:341)
+|         ->04.82% (24,000B) 0x40065C3: vector (stl_vector.h:601)
+|           ->04.82% (24,000B) 0x40065C3: std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (vector.tcc:278)
+|             ->01.61% (8,000B) 0x400455A: assign (stl_vector.h:876)
+|             | ->01.61% (8,000B) 0x400455A: recalculate_stats (solver.cpp:42)
+|             |   ->01.61% (8,000B) 0x400455A: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.61% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.61% (8,000B) 0x4004573: assign (stl_vector.h:876)
+|             | ->01.61% (8,000B) 0x4004573: recalculate_stats (solver.cpp:43)
+|             |   ->01.61% (8,000B) 0x4004573: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.61% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.61% (8,000B) 0x400458C: assign (stl_vector.h:876)
+|               ->01.61% (8,000B) 0x400458C: recalculate_stats (solver.cpp:44)
+|                 ->01.61% (8,000B) 0x400458C: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|                   ->01.61% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|                     
+->03.21% (16,000B) 0x4006BEB: allocate (new_allocator.h:151)
+| ->03.21% (16,000B) 0x4006BEB: allocate (alloc_traits.h:614)
+|   ->03.21% (16,000B) 0x4006BEB: _M_allocate (stl_vector.h:387)
+|     ->03.21% (16,000B) 0x4006BEB: void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) (vector.tcc:572)
+|       ->03.21% (16,000B) 0x40044E9: emplace_back<int> (vector.tcc:123)
+|         ->03.21% (16,000B) 0x40044E9: push_back (stl_vector.h:1434)
+|           ->03.21% (16,000B) 0x40044E9: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:144)
+|             ->01.61% (8,000B) 0x4003512: main (solver.cpp:372)
+|             | 
+|             ->01.61% (8,000B) 0x400354D: main (solver.cpp:373)
+|               
+->00.04% (196B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 37          8,765          502,464          395,380       107,084            0
+ 38          8,965          353,408          281,668        71,740            0
+ 39          9,165          445,696          357,764        87,932            0
+ 40          9,365          508,368          397,348       111,020            0
+ 41          9,565          437,632          349,756        87,876            0
+79.92% (349,756B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->16.85% (73,728B) 0x49268F6: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35)
+| ->16.85% (73,728B) 0x40107CE: call_init.part.0 (dl-init.c:74)
+|   ->16.85% (73,728B) 0x40108E3: call_init (dl-init.c:120)
+|     ->16.85% (73,728B) 0x40108E3: _dl_init (dl-init.c:121)
+|       ->16.85% (73,728B) 0x402D39F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->16.85% (73,728B) 0x2: ???
+|           ->16.85% (73,728B) 0x1FFEFFFDCA: ???
+|             ->16.85% (73,728B) 0x1FFEFFFDD3: ???
+|               ->16.85% (73,728B) 0x1FFEFFFDE1: ???
+|                 
+->16.46% (72,048B) 0x4004D27: allocate (new_allocator.h:151)
+| ->16.46% (72,048B) 0x4004D27: allocate (alloc_traits.h:614)
+|   ->16.46% (72,048B) 0x4004D27: _M_allocate (stl_vector.h:387)
+|     ->16.46% (72,048B) 0x4004D27: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1910)
+|       ->16.46% (72,048B) 0x4004D27: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|         ->10.97% (48,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|         | ->05.48% (24,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->05.48% (24,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->05.50% (24,048B) 0x40058B3: Formula (solver.cpp:35)
+|         | ->05.50% (24,048B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |   ->05.50% (24,048B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |   | ->05.50% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |   |   
+|         |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         |   
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->10.97% (48,000B) 0x4006818: allocate (new_allocator.h:151)
+| ->10.97% (48,000B) 0x4006818: allocate (alloc_traits.h:614)
+|   ->10.97% (48,000B) 0x4006818: _M_allocate (stl_vector.h:387)
+|     ->10.97% (48,000B) 0x4006818: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) (vector.tcc:845)
+|       ->10.97% (48,000B) 0x4004753: resize (stl_vector.h:1146)
+|         ->10.97% (48,000B) 0x4004753: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:117)
+|           ->05.48% (24,000B) 0x4003512: main (solver.cpp:372)
+|           | 
+|           ->05.48% (24,000B) 0x400354D: main (solver.cpp:373)
+|             
+->10.97% (48,000B) 0x400697D: allocate (new_allocator.h:151)
+| ->10.97% (48,000B) 0x400697D: allocate (alloc_traits.h:614)
+|   ->10.97% (48,000B) 0x400697D: _M_allocate (stl_vector.h:387)
+|     ->10.97% (48,000B) 0x400697D: void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (vector.tcc:572)
+|       ->10.97% (48,000B) 0x4005719: push_back (stl_vector.h:1427)
+|         ->10.97% (48,000B) 0x4005719: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:318)
+|           ->10.97% (48,000B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|           | ->10.97% (48,000B) 0x4003585: main (solver.cpp:377)
+|           |   
+|           ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|           
+->09.14% (40,000B) 0x4003BC6: allocate (new_allocator.h:151)
+| ->09.14% (40,000B) 0x4003BC6: allocate (alloc_traits.h:614)
+|   ->09.14% (40,000B) 0x4003BC6: _M_allocate (stl_vector.h:387)
+|     ->09.14% (40,000B) 0x4003BC6: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int> > > (stl_vector.h:1910)
+|       ->09.14% (40,000B) 0x4003BC6: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (vector.tcc:238)
+|         ->03.66% (16,000B) in 12 places, all below massif's threshold (1.00%)
+|         | 
+|         ->01.83% (8,000B) 0x4006D01: Formula::Formula(Formula const&) (solver.cpp:34)
+|         | ->01.83% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.83% (8,000B) 0x4006D19: Formula::Formula(Formula const&) (solver.cpp:36)
+|         | ->01.83% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.83% (8,000B) 0x4006D25: Formula::Formula(Formula const&) (solver.cpp:37)
+|           ->01.83% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             
+->06.35% (27,784B) 0x4004D57: allocate (new_allocator.h:151)
+| ->06.35% (27,784B) 0x4004D57: allocate (alloc_traits.h:614)
+|   ->06.35% (27,784B) 0x4004D57: _M_allocate (stl_vector.h:387)
+|     ->06.35% (27,784B) 0x4004D57: _M_create_storage (stl_vector.h:405)
+|       ->06.35% (27,784B) 0x4004D57: _Vector_base (stl_vector.h:341)
+|         ->06.35% (27,784B) 0x4004D57: vector (stl_vector.h:633)
+|           ->06.35% (27,784B) 0x4004D57: _Construct<std::vector<int>, const std::vector<int, std::allocator<int> >&> (stl_construct.h:133)
+|             ->06.35% (27,784B) 0x4004D57: __do_uninit_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:145)
+|               ->06.35% (27,784B) 0x4004D57: uninitialized_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:266)
+|                 ->06.35% (27,784B) 0x4004D57: __uninitialized_copy_a<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*, std::vector<int> > (stl_uninitialized.h:637)
+|                   ->06.35% (27,784B) 0x4004D57: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1912)
+|                     ->06.35% (27,784B) 0x4004D57: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|                       ->03.66% (16,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|                       | ->01.83% (8,000B) 0x4003560: main (solver.cpp:377)
+|                       | | 
+|                       | ->01.83% (8,000B) 0x4003570: main (solver.cpp:377)
+|                       |   
+|                       ->01.83% (8,000B) 0x4005FEC: Formula (solver.cpp:35)
+|                       | ->01.83% (8,000B) 0x4005FEC: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|                       |   ->01.83% (8,000B) 0x4003585: main (solver.cpp:377)
+|                       |     
+|                       ->00.86% (3,784B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       
+->05.48% (24,000B) 0x40065C3: allocate (new_allocator.h:151)
+| ->05.48% (24,000B) 0x40065C3: allocate (alloc_traits.h:614)
+|   ->05.48% (24,000B) 0x40065C3: _M_allocate (stl_vector.h:387)
+|     ->05.48% (24,000B) 0x40065C3: _M_create_storage (stl_vector.h:405)
+|       ->05.48% (24,000B) 0x40065C3: _Vector_base (stl_vector.h:341)
+|         ->05.48% (24,000B) 0x40065C3: vector (stl_vector.h:601)
+|           ->05.48% (24,000B) 0x40065C3: std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (vector.tcc:278)
+|             ->01.83% (8,000B) 0x400455A: assign (stl_vector.h:876)
+|             | ->01.83% (8,000B) 0x400455A: recalculate_stats (solver.cpp:42)
+|             |   ->01.83% (8,000B) 0x400455A: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.83% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.83% (8,000B) 0x4004573: assign (stl_vector.h:876)
+|             | ->01.83% (8,000B) 0x4004573: recalculate_stats (solver.cpp:43)
+|             |   ->01.83% (8,000B) 0x4004573: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.83% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.83% (8,000B) 0x400458C: assign (stl_vector.h:876)
+|               ->01.83% (8,000B) 0x400458C: recalculate_stats (solver.cpp:44)
+|                 ->01.83% (8,000B) 0x400458C: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|                   ->01.83% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|                     
+->03.66% (16,000B) 0x4006BEB: allocate (new_allocator.h:151)
+| ->03.66% (16,000B) 0x4006BEB: allocate (alloc_traits.h:614)
+|   ->03.66% (16,000B) 0x4006BEB: _M_allocate (stl_vector.h:387)
+|     ->03.66% (16,000B) 0x4006BEB: void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) (vector.tcc:572)
+|       ->03.66% (16,000B) 0x40044E9: emplace_back<int> (vector.tcc:123)
+|         ->03.66% (16,000B) 0x40044E9: push_back (stl_vector.h:1434)
+|           ->03.66% (16,000B) 0x40044E9: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:144)
+|             ->01.83% (8,000B) 0x4003512: main (solver.cpp:372)
+|             | 
+|             ->01.83% (8,000B) 0x400354D: main (solver.cpp:373)
+|               
+->00.04% (196B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 42          9,765          378,440          311,332        67,108            0
+ 43          9,965          449,896          359,164        90,732            0
+ 44         10,165          508,272          397,316       110,956            0
+ 45         10,365          362,984          284,860        78,124            0
+ 46         10,565          393,680          316,412        77,268            0
+80.37% (316,412B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->18.73% (73,728B) 0x49268F6: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35)
+| ->18.73% (73,728B) 0x40107CE: call_init.part.0 (dl-init.c:74)
+|   ->18.73% (73,728B) 0x40108E3: call_init (dl-init.c:120)
+|     ->18.73% (73,728B) 0x40108E3: _dl_init (dl-init.c:121)
+|       ->18.73% (73,728B) 0x402D39F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->18.73% (73,728B) 0x2: ???
+|           ->18.73% (73,728B) 0x1FFEFFFDCA: ???
+|             ->18.73% (73,728B) 0x1FFEFFFDD3: ???
+|               ->18.73% (73,728B) 0x1FFEFFFDE1: ???
+|                 
+->12.19% (48,000B) 0x4004D27: allocate (new_allocator.h:151)
+| ->12.19% (48,000B) 0x4004D27: allocate (alloc_traits.h:614)
+|   ->12.19% (48,000B) 0x4004D27: _M_allocate (stl_vector.h:387)
+|     ->12.19% (48,000B) 0x4004D27: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1910)
+|       ->12.19% (48,000B) 0x4004D27: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|         ->12.19% (48,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|         | ->06.10% (24,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->06.10% (24,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->12.19% (48,000B) 0x4006818: allocate (new_allocator.h:151)
+| ->12.19% (48,000B) 0x4006818: allocate (alloc_traits.h:614)
+|   ->12.19% (48,000B) 0x4006818: _M_allocate (stl_vector.h:387)
+|     ->12.19% (48,000B) 0x4006818: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) (vector.tcc:845)
+|       ->12.19% (48,000B) 0x4004753: resize (stl_vector.h:1146)
+|         ->12.19% (48,000B) 0x4004753: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:117)
+|           ->06.10% (24,000B) 0x4003512: main (solver.cpp:372)
+|           | 
+|           ->06.10% (24,000B) 0x400354D: main (solver.cpp:373)
+|             
+->12.19% (48,000B) 0x400697D: allocate (new_allocator.h:151)
+| ->12.19% (48,000B) 0x400697D: allocate (alloc_traits.h:614)
+|   ->12.19% (48,000B) 0x400697D: _M_allocate (stl_vector.h:387)
+|     ->12.19% (48,000B) 0x400697D: void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (vector.tcc:572)
+|       ->12.19% (48,000B) 0x4005719: push_back (stl_vector.h:1427)
+|         ->12.19% (48,000B) 0x4005719: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:318)
+|           ->12.19% (48,000B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|           | ->12.19% (48,000B) 0x4003585: main (solver.cpp:377)
+|           |   
+|           ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|           
+->09.14% (36,000B) 0x4003BC6: allocate (new_allocator.h:151)
+| ->09.14% (36,000B) 0x4003BC6: allocate (alloc_traits.h:614)
+|   ->09.14% (36,000B) 0x4003BC6: _M_allocate (stl_vector.h:387)
+|     ->09.14% (36,000B) 0x4003BC6: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int> > > (stl_vector.h:1910)
+|       ->09.14% (36,000B) 0x4003BC6: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (vector.tcc:238)
+|         ->02.03% (8,000B) 0x4006D01: Formula::Formula(Formula const&) (solver.cpp:34)
+|         | ->01.02% (4,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->01.02% (4,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->02.03% (8,000B) 0x4006D19: Formula::Formula(Formula const&) (solver.cpp:36)
+|         | ->01.02% (4,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->01.02% (4,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->02.03% (8,000B) 0x4006D25: Formula::Formula(Formula const&) (solver.cpp:37)
+|         | ->01.02% (4,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->01.02% (4,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->01.02% (4,000B) 0x4005FD3: Formula (solver.cpp:34)
+|         | ->01.02% (4,000B) 0x4005FD3: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |   ->01.02% (4,000B) 0x4003585: main (solver.cpp:377)
+|         |     
+|         ->01.02% (4,000B) 0x4006000: Formula (solver.cpp:36)
+|         | ->01.02% (4,000B) 0x4006000: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |   ->01.02% (4,000B) 0x4003585: main (solver.cpp:377)
+|         |     
+|         ->01.02% (4,000B) 0x4006014: Formula (solver.cpp:37)
+|         | ->01.02% (4,000B) 0x4006014: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |   ->01.02% (4,000B) 0x4003585: main (solver.cpp:377)
+|         |     
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->06.10% (24,000B) 0x40065C3: allocate (new_allocator.h:151)
+| ->06.10% (24,000B) 0x40065C3: allocate (alloc_traits.h:614)
+|   ->06.10% (24,000B) 0x40065C3: _M_allocate (stl_vector.h:387)
+|     ->06.10% (24,000B) 0x40065C3: _M_create_storage (stl_vector.h:405)
+|       ->06.10% (24,000B) 0x40065C3: _Vector_base (stl_vector.h:341)
+|         ->06.10% (24,000B) 0x40065C3: vector (stl_vector.h:601)
+|           ->06.10% (24,000B) 0x40065C3: std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (vector.tcc:278)
+|             ->02.03% (8,000B) 0x400455A: assign (stl_vector.h:876)
+|             | ->02.03% (8,000B) 0x400455A: recalculate_stats (solver.cpp:42)
+|             |   ->02.03% (8,000B) 0x400455A: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.02% (4,000B) 0x4003512: main (solver.cpp:372)
+|             |     | 
+|             |     ->01.02% (4,000B) 0x400354D: main (solver.cpp:373)
+|             |       
+|             ->02.03% (8,000B) 0x4004573: assign (stl_vector.h:876)
+|             | ->02.03% (8,000B) 0x4004573: recalculate_stats (solver.cpp:43)
+|             |   ->02.03% (8,000B) 0x4004573: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.02% (4,000B) 0x4003512: main (solver.cpp:372)
+|             |     | 
+|             |     ->01.02% (4,000B) 0x400354D: main (solver.cpp:373)
+|             |       
+|             ->02.03% (8,000B) 0x400458C: assign (stl_vector.h:876)
+|               ->02.03% (8,000B) 0x400458C: recalculate_stats (solver.cpp:44)
+|                 ->02.03% (8,000B) 0x400458C: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|                   ->01.02% (4,000B) 0x4003512: main (solver.cpp:372)
+|                   | 
+|                   ->01.02% (4,000B) 0x400354D: main (solver.cpp:373)
+|                     
+->05.71% (22,488B) 0x4004D57: allocate (new_allocator.h:151)
+| ->05.71% (22,488B) 0x4004D57: allocate (alloc_traits.h:614)
+|   ->05.71% (22,488B) 0x4004D57: _M_allocate (stl_vector.h:387)
+|     ->05.71% (22,488B) 0x4004D57: _M_create_storage (stl_vector.h:405)
+|       ->05.71% (22,488B) 0x4004D57: _Vector_base (stl_vector.h:341)
+|         ->05.71% (22,488B) 0x4004D57: vector (stl_vector.h:633)
+|           ->05.71% (22,488B) 0x4004D57: _Construct<std::vector<int>, const std::vector<int, std::allocator<int> >&> (stl_construct.h:133)
+|             ->05.71% (22,488B) 0x4004D57: __do_uninit_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:145)
+|               ->05.71% (22,488B) 0x4004D57: uninitialized_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:266)
+|                 ->05.71% (22,488B) 0x4004D57: __uninitialized_copy_a<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*, std::vector<int> > (stl_uninitialized.h:637)
+|                   ->05.71% (22,488B) 0x4004D57: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1912)
+|                     ->05.71% (22,488B) 0x4004D57: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|                       ->04.06% (16,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|                       | ->02.03% (8,000B) 0x4003560: main (solver.cpp:377)
+|                       | | 
+|                       | ->02.03% (8,000B) 0x4003570: main (solver.cpp:377)
+|                       |   
+|                       ->01.65% (6,488B) 0x4005FEC: Formula (solver.cpp:35)
+|                       | ->01.65% (6,488B) 0x4005FEC: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|                       |   ->01.65% (6,488B) 0x4003585: main (solver.cpp:377)
+|                       |     
+|                       ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       
+->04.06% (16,000B) 0x4006BEB: allocate (new_allocator.h:151)
+| ->04.06% (16,000B) 0x4006BEB: allocate (alloc_traits.h:614)
+|   ->04.06% (16,000B) 0x4006BEB: _M_allocate (stl_vector.h:387)
+|     ->04.06% (16,000B) 0x4006BEB: void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) (vector.tcc:572)
+|       ->04.06% (16,000B) 0x40044E9: emplace_back<int> (vector.tcc:123)
+|         ->04.06% (16,000B) 0x40044E9: push_back (stl_vector.h:1434)
+|           ->04.06% (16,000B) 0x40044E9: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:144)
+|             ->02.03% (8,000B) 0x4003512: main (solver.cpp:372)
+|             | 
+|             ->02.03% (8,000B) 0x400354D: main (solver.cpp:373)
+|               
+->00.05% (196B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 47         10,765          494,544          398,064        96,480            0
+ 48         10,965          436,648          349,428        87,220            0
+ 49         11,165          387,008          314,188        72,820            0
+ 50         11,215          507,000          402,216       104,784            0
+ 51         11,265          436,216          349,284        86,932            0
+ 52         11,315          388,088          314,548        73,540            0
+ 53         11,365          501,000          400,216       100,784            0
+ 54         11,415          445,576          352,404        93,172            0
+ 55         11,465          379,208          311,588        67,620            0
+ 56         11,515          455,392          360,996        94,396            0
+ 57         11,565          491,784          391,820        99,964            0
+79.67% (391,820B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->19.54% (96,096B) 0x4004D27: allocate (new_allocator.h:151)
+| ->19.54% (96,096B) 0x4004D27: allocate (alloc_traits.h:614)
+|   ->19.54% (96,096B) 0x4004D27: _M_allocate (stl_vector.h:387)
+|     ->19.54% (96,096B) 0x4004D27: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1910)
+|       ->19.54% (96,096B) 0x4004D27: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|         ->09.76% (48,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|         | ->04.88% (24,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->04.88% (24,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->04.89% (24,048B) 0x40058B3: Formula (solver.cpp:35)
+|         | ->04.89% (24,048B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |   ->04.89% (24,048B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |   | ->04.89% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |   |   
+|         |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         |   
+|         ->04.89% (24,048B) 0x40059BA: Formula (solver.cpp:35)
+|         | ->04.89% (24,048B) 0x40059BA: is_sat (solver.cpp:297)
+|         |   ->04.89% (24,048B) 0x40059BA: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |     ->04.89% (24,048B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |     | ->04.89% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |     |   
+|         |     ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         |     
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->14.99% (73,728B) 0x49268F6: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35)
+| ->14.99% (73,728B) 0x40107CE: call_init.part.0 (dl-init.c:74)
+|   ->14.99% (73,728B) 0x40108E3: call_init (dl-init.c:120)
+|     ->14.99% (73,728B) 0x40108E3: _dl_init (dl-init.c:121)
+|       ->14.99% (73,728B) 0x402D39F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->14.99% (73,728B) 0x2: ???
+|           ->14.99% (73,728B) 0x1FFEFFFDCA: ???
+|             ->14.99% (73,728B) 0x1FFEFFFDD3: ???
+|               ->14.99% (73,728B) 0x1FFEFFFDE1: ???
+|                 
+->10.57% (52,000B) 0x4003BC6: allocate (new_allocator.h:151)
+| ->10.57% (52,000B) 0x4003BC6: allocate (alloc_traits.h:614)
+|   ->10.57% (52,000B) 0x4003BC6: _M_allocate (stl_vector.h:387)
+|     ->10.57% (52,000B) 0x4003BC6: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int> > > (stl_vector.h:1910)
+|       ->10.57% (52,000B) 0x4003BC6: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (vector.tcc:238)
+|         ->05.69% (28,000B) in 12 places, all below massif's threshold (1.00%)
+|         | 
+|         ->01.63% (8,000B) 0x4006D01: Formula::Formula(Formula const&) (solver.cpp:34)
+|         | ->01.63% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.63% (8,000B) 0x4006D19: Formula::Formula(Formula const&) (solver.cpp:36)
+|         | ->01.63% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.63% (8,000B) 0x4006D25: Formula::Formula(Formula const&) (solver.cpp:37)
+|           ->01.63% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             
+->09.76% (48,000B) 0x4006818: allocate (new_allocator.h:151)
+| ->09.76% (48,000B) 0x4006818: allocate (alloc_traits.h:614)
+|   ->09.76% (48,000B) 0x4006818: _M_allocate (stl_vector.h:387)
+|     ->09.76% (48,000B) 0x4006818: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) (vector.tcc:845)
+|       ->09.76% (48,000B) 0x4004753: resize (stl_vector.h:1146)
+|         ->09.76% (48,000B) 0x4004753: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:117)
+|           ->04.88% (24,000B) 0x4003512: main (solver.cpp:372)
+|           | 
+|           ->04.88% (24,000B) 0x400354D: main (solver.cpp:373)
+|             
+->09.76% (48,000B) 0x400697D: allocate (new_allocator.h:151)
+| ->09.76% (48,000B) 0x400697D: allocate (alloc_traits.h:614)
+|   ->09.76% (48,000B) 0x400697D: _M_allocate (stl_vector.h:387)
+|     ->09.76% (48,000B) 0x400697D: void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (vector.tcc:572)
+|       ->09.76% (48,000B) 0x4005719: push_back (stl_vector.h:1427)
+|         ->09.76% (48,000B) 0x4005719: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:318)
+|           ->09.76% (48,000B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|           | ->09.76% (48,000B) 0x4003585: main (solver.cpp:377)
+|           |   
+|           ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|           
+->06.87% (33,800B) 0x4004D57: allocate (new_allocator.h:151)
+| ->06.87% (33,800B) 0x4004D57: allocate (alloc_traits.h:614)
+|   ->06.87% (33,800B) 0x4004D57: _M_allocate (stl_vector.h:387)
+|     ->06.87% (33,800B) 0x4004D57: _M_create_storage (stl_vector.h:405)
+|       ->06.87% (33,800B) 0x4004D57: _Vector_base (stl_vector.h:341)
+|         ->06.87% (33,800B) 0x4004D57: vector (stl_vector.h:633)
+|           ->06.87% (33,800B) 0x4004D57: _Construct<std::vector<int>, const std::vector<int, std::allocator<int> >&> (stl_construct.h:133)
+|             ->06.87% (33,800B) 0x4004D57: __do_uninit_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:145)
+|               ->06.87% (33,800B) 0x4004D57: uninitialized_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:266)
+|                 ->06.87% (33,800B) 0x4004D57: __uninitialized_copy_a<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*, std::vector<int> > (stl_uninitialized.h:637)
+|                   ->06.87% (33,800B) 0x4004D57: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1912)
+|                     ->06.87% (33,800B) 0x4004D57: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|                       ->03.25% (16,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|                       | ->01.63% (8,000B) 0x4003560: main (solver.cpp:377)
+|                       | | 
+|                       | ->01.63% (8,000B) 0x4003570: main (solver.cpp:377)
+|                       |   
+|                       ->01.63% (8,008B) 0x40058B3: Formula (solver.cpp:35)
+|                       | ->01.63% (8,008B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|                       |   ->01.63% (8,008B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|                       |   | ->01.63% (8,008B) 0x4003585: main (solver.cpp:377)
+|                       |   |   
+|                       |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       |   
+|                       ->01.63% (8,000B) 0x4005FEC: Formula (solver.cpp:35)
+|                       | ->01.63% (8,000B) 0x4005FEC: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|                       |   ->01.63% (8,000B) 0x4003585: main (solver.cpp:377)
+|                       |     
+|                       ->00.36% (1,792B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       
+->04.88% (24,000B) 0x40065C3: allocate (new_allocator.h:151)
+| ->04.88% (24,000B) 0x40065C3: allocate (alloc_traits.h:614)
+|   ->04.88% (24,000B) 0x40065C3: _M_allocate (stl_vector.h:387)
+|     ->04.88% (24,000B) 0x40065C3: _M_create_storage (stl_vector.h:405)
+|       ->04.88% (24,000B) 0x40065C3: _Vector_base (stl_vector.h:341)
+|         ->04.88% (24,000B) 0x40065C3: vector (stl_vector.h:601)
+|           ->04.88% (24,000B) 0x40065C3: std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (vector.tcc:278)
+|             ->01.63% (8,000B) 0x400455A: assign (stl_vector.h:876)
+|             | ->01.63% (8,000B) 0x400455A: recalculate_stats (solver.cpp:42)
+|             |   ->01.63% (8,000B) 0x400455A: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.63% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.63% (8,000B) 0x4004573: assign (stl_vector.h:876)
+|             | ->01.63% (8,000B) 0x4004573: recalculate_stats (solver.cpp:43)
+|             |   ->01.63% (8,000B) 0x4004573: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.63% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.63% (8,000B) 0x400458C: assign (stl_vector.h:876)
+|               ->01.63% (8,000B) 0x400458C: recalculate_stats (solver.cpp:44)
+|                 ->01.63% (8,000B) 0x400458C: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|                   ->01.63% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|                     
+->03.25% (16,000B) 0x4006BEB: allocate (new_allocator.h:151)
+| ->03.25% (16,000B) 0x4006BEB: allocate (alloc_traits.h:614)
+|   ->03.25% (16,000B) 0x4006BEB: _M_allocate (stl_vector.h:387)
+|     ->03.25% (16,000B) 0x4006BEB: void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) (vector.tcc:572)
+|       ->03.25% (16,000B) 0x40044E9: emplace_back<int> (vector.tcc:123)
+|         ->03.25% (16,000B) 0x40044E9: push_back (stl_vector.h:1434)
+|           ->03.25% (16,000B) 0x40044E9: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:144)
+|             ->01.63% (8,000B) 0x4003512: main (solver.cpp:372)
+|             | 
+|             ->01.63% (8,000B) 0x400354D: main (solver.cpp:373)
+|               
+->00.04% (196B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n       time(ms)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 58         11,615          345,632          279,076        66,556            0
+ 59         11,665          446,872          358,156        88,716            0
+ 60         11,715          506,928          396,868       110,060            0
+ 61         11,765          361,496          284,364        77,132            0
+ 62         11,815          437,200          354,932        82,268            0
+ 63         11,865          518,424          406,024       112,400            0
+ 64         11,915          365,432          285,676        79,756            0
+ 65         11,965          396,272          317,276        78,996            0
+ 66         12,015          508,368          402,672       105,696            0
+ 67         12,065          434,512          348,716        85,796            0
+80.25% (348,716B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->16.97% (73,728B) 0x49268F6: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35)
+| ->16.97% (73,728B) 0x40107CE: call_init.part.0 (dl-init.c:74)
+|   ->16.97% (73,728B) 0x40108E3: call_init (dl-init.c:120)
+|     ->16.97% (73,728B) 0x40108E3: _dl_init (dl-init.c:121)
+|       ->16.97% (73,728B) 0x402D39F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         ->16.97% (73,728B) 0x2: ???
+|           ->16.97% (73,728B) 0x1FFEFFFDCA: ???
+|             ->16.97% (73,728B) 0x1FFEFFFDD3: ???
+|               ->16.97% (73,728B) 0x1FFEFFFDE1: ???
+|                 
+->16.58% (72,048B) 0x4004D27: allocate (new_allocator.h:151)
+| ->16.58% (72,048B) 0x4004D27: allocate (alloc_traits.h:614)
+|   ->16.58% (72,048B) 0x4004D27: _M_allocate (stl_vector.h:387)
+|     ->16.58% (72,048B) 0x4004D27: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1910)
+|       ->16.58% (72,048B) 0x4004D27: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|         ->11.05% (48,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|         | ->05.52% (24,000B) 0x4003560: main (solver.cpp:377)
+|         | | 
+|         | ->05.52% (24,000B) 0x4003570: main (solver.cpp:377)
+|         |   
+|         ->05.53% (24,048B) 0x40058B3: Formula (solver.cpp:35)
+|         | ->05.53% (24,048B) 0x40058B3: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:322)
+|         |   ->05.53% (24,048B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|         |   | ->05.53% (24,048B) 0x4003585: main (solver.cpp:377)
+|         |   |   
+|         |   ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         |   
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->11.05% (48,000B) 0x4006818: allocate (new_allocator.h:151)
+| ->11.05% (48,000B) 0x4006818: allocate (alloc_traits.h:614)
+|   ->11.05% (48,000B) 0x4006818: _M_allocate (stl_vector.h:387)
+|     ->11.05% (48,000B) 0x4006818: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) (vector.tcc:845)
+|       ->11.05% (48,000B) 0x4004753: resize (stl_vector.h:1146)
+|         ->11.05% (48,000B) 0x4004753: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:117)
+|           ->05.52% (24,000B) 0x4003512: main (solver.cpp:372)
+|           | 
+|           ->05.52% (24,000B) 0x400354D: main (solver.cpp:373)
+|             
+->11.05% (48,000B) 0x400697D: allocate (new_allocator.h:151)
+| ->11.05% (48,000B) 0x400697D: allocate (alloc_traits.h:614)
+|   ->11.05% (48,000B) 0x400697D: _M_allocate (stl_vector.h:387)
+|     ->11.05% (48,000B) 0x400697D: void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (vector.tcc:572)
+|       ->11.05% (48,000B) 0x4005719: push_back (stl_vector.h:1427)
+|         ->11.05% (48,000B) 0x4005719: check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) (solver.cpp:318)
+|           ->11.05% (48,000B) 0x400602E: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|           | ->11.05% (48,000B) 0x4003585: main (solver.cpp:377)
+|           |   
+|           ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|           
+->09.21% (40,000B) 0x4003BC6: allocate (new_allocator.h:151)
+| ->09.21% (40,000B) 0x4003BC6: allocate (alloc_traits.h:614)
+|   ->09.21% (40,000B) 0x4003BC6: _M_allocate (stl_vector.h:387)
+|     ->09.21% (40,000B) 0x4003BC6: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<int const*, std::vector<int> > > (stl_vector.h:1910)
+|       ->09.21% (40,000B) 0x4003BC6: std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (vector.tcc:238)
+|         ->03.68% (16,000B) in 12 places, all below massif's threshold (1.00%)
+|         | 
+|         ->01.84% (8,000B) 0x4006D01: Formula::Formula(Formula const&) (solver.cpp:34)
+|         | ->01.84% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.84% (8,000B) 0x4006D19: Formula::Formula(Formula const&) (solver.cpp:36)
+|         | ->01.84% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|         |   
+|         ->01.84% (8,000B) 0x4006D25: Formula::Formula(Formula const&) (solver.cpp:37)
+|           ->01.84% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             
+->06.15% (26,744B) 0x4004D57: allocate (new_allocator.h:151)
+| ->06.15% (26,744B) 0x4004D57: allocate (alloc_traits.h:614)
+|   ->06.15% (26,744B) 0x4004D57: _M_allocate (stl_vector.h:387)
+|     ->06.15% (26,744B) 0x4004D57: _M_create_storage (stl_vector.h:405)
+|       ->06.15% (26,744B) 0x4004D57: _Vector_base (stl_vector.h:341)
+|         ->06.15% (26,744B) 0x4004D57: vector (stl_vector.h:633)
+|           ->06.15% (26,744B) 0x4004D57: _Construct<std::vector<int>, const std::vector<int, std::allocator<int> >&> (stl_construct.h:133)
+|             ->06.15% (26,744B) 0x4004D57: __do_uninit_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:145)
+|               ->06.15% (26,744B) 0x4004D57: uninitialized_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*> (stl_uninitialized.h:266)
+|                 ->06.15% (26,744B) 0x4004D57: __uninitialized_copy_a<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, __gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > >, std::vector<int>*, std::vector<int> > (stl_uninitialized.h:637)
+|                   ->06.15% (26,744B) 0x4004D57: _M_allocate_and_copy<__gnu_cxx::__normal_iterator<const std::vector<int>*, std::vector<std::vector<int> > > > (stl_vector.h:1912)
+|                     ->06.15% (26,744B) 0x4004D57: std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (vector.tcc:238)
+|                       ->03.68% (16,000B) 0x4006D0D: Formula::Formula(Formula const&) (solver.cpp:35)
+|                       | ->01.84% (8,000B) 0x4003560: main (solver.cpp:377)
+|                       | | 
+|                       | ->01.84% (8,000B) 0x4003570: main (solver.cpp:377)
+|                       |   
+|                       ->01.84% (8,000B) 0x4005FEC: Formula (solver.cpp:35)
+|                       | ->01.84% (8,000B) 0x4005FEC: check_equivalence(Formula, Formula, SATSolverDPLL&) (solver.cpp:348)
+|                       |   ->01.84% (8,000B) 0x4003585: main (solver.cpp:377)
+|                       |     
+|                       ->00.63% (2,744B) in 1+ places, all below ms_print's threshold (01.00%)
+|                       
+->05.52% (24,000B) 0x40065C3: allocate (new_allocator.h:151)
+| ->05.52% (24,000B) 0x40065C3: allocate (alloc_traits.h:614)
+|   ->05.52% (24,000B) 0x40065C3: _M_allocate (stl_vector.h:387)
+|     ->05.52% (24,000B) 0x40065C3: _M_create_storage (stl_vector.h:405)
+|       ->05.52% (24,000B) 0x40065C3: _Vector_base (stl_vector.h:341)
+|         ->05.52% (24,000B) 0x40065C3: vector (stl_vector.h:601)
+|           ->05.52% (24,000B) 0x40065C3: std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (vector.tcc:278)
+|             ->01.84% (8,000B) 0x400455A: assign (stl_vector.h:876)
+|             | ->01.84% (8,000B) 0x400455A: recalculate_stats (solver.cpp:42)
+|             |   ->01.84% (8,000B) 0x400455A: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.84% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.84% (8,000B) 0x4004573: assign (stl_vector.h:876)
+|             | ->01.84% (8,000B) 0x4004573: recalculate_stats (solver.cpp:43)
+|             |   ->01.84% (8,000B) 0x4004573: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|             |     ->01.84% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|             |       
+|             ->01.84% (8,000B) 0x400458C: assign (stl_vector.h:876)
+|               ->01.84% (8,000B) 0x400458C: recalculate_stats (solver.cpp:44)
+|                 ->01.84% (8,000B) 0x400458C: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:162)
+|                   ->01.84% (8,000B) in 2 places, all below massif's threshold (1.00%)
+|                     
+->03.68% (16,000B) 0x4006BEB: allocate (new_allocator.h:151)
+| ->03.68% (16,000B) 0x4006BEB: allocate (alloc_traits.h:614)
+|   ->03.68% (16,000B) 0x4006BEB: _M_allocate (stl_vector.h:387)
+|     ->03.68% (16,000B) 0x4006BEB: void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) (vector.tcc:572)
+|       ->03.68% (16,000B) 0x40044E9: emplace_back<int> (vector.tcc:123)
+|         ->03.68% (16,000B) 0x40044E9: push_back (stl_vector.h:1434)
+|           ->03.68% (16,000B) 0x40044E9: readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (solver.cpp:144)
+|             ->01.84% (8,000B) 0x4003512: main (solver.cpp:372)
+|             | 
+|             ->01.84% (8,000B) 0x400354D: main (solver.cpp:373)
+|               
+->00.05% (196B) in 1+ places, all below ms_print's threshold (01.00%)
+

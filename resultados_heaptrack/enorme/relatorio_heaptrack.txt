@@ -1,0 +1,609 @@
+reading file "resultados_heaptrack/enorme/heaptrack_enorme.gz" - please wait, this might take some time...
+Debuggee command was: ./solver enorme/f1.cnf enorme/f2_equivalente.cnf
+finished reading file, now analyzing data:
+
+MOST CALLS TO ALLOCATION FUNCTIONS
+6042012 calls to allocation functions with 140.03K peak consumption from
+std::__new_allocator<>::allocate(unsigned long, void const*)
+  at /usr/include/c++/15/bits/new_allocator.h:151
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+std::allocator_traits<>::allocate(std::allocator<>&, unsigned long)
+  at /usr/include/c++/15/bits/alloc_traits.h:614
+std::_Vector_base<>::_M_allocate(unsigned long)
+  at /usr/include/c++/15/bits/stl_vector.h:387
+void std::vector<>::_M_realloc_append<>(int&&)
+  at /usr/include/c++/15/bits/vector.tcc:572
+1002000 calls with 8.01K peak consumption from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:322
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1002000 calls with 0B peak consumption from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    SATSolverDPLL::is_sat(Formula)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:297
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:322
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:348
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1002000 calls with 8.01K peak consumption from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    SATSolverDPLL::is_sat(Formula)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:297
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:322
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1002000 calls with 0B peak consumption from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:322
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:348
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1000000 calls with 8.00K peak consumption from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+  and 1034012 from 43 other places
+
+8004 calls to allocation functions with 192.10K peak consumption from
+std::__new_allocator<>::allocate(unsigned long, void const*)
+  at /usr/include/c++/15/bits/new_allocator.h:151
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+std::allocator_traits<>::allocate(std::allocator<>&, unsigned long)
+  at /usr/include/c++/15/bits/alloc_traits.h:614
+std::_Vector_base<>::_M_allocate(unsigned long)
+  at /usr/include/c++/15/bits/stl_vector.h:387
+std::vector<>::_M_default_append(unsigned long)
+  at /usr/include/c++/15/bits/vector.tcc:845
+1000 calls with 0B peak consumption from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1000 calls with 48.00K peak consumption from:
+    std::vector<>::push_back(std::vector<> const&)
+      at /usr/include/c++/15/bits/stl_vector.h:1427
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:318
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1000 calls with 24.05K peak consumption from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:322
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1000 calls with 24.05K peak consumption from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    SATSolverDPLL::is_sat(Formula)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:297
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:322
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1000 calls with 0B peak consumption from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:348
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+  and 3004 from 7 other places
+
+3 calls to allocation functions with 128B peak consumption from
+std::__new_allocator<>::allocate(unsigned long, void const*)
+  at /usr/include/c++/15/bits/new_allocator.h:151
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+std::allocator_traits<>::allocate(std::allocator<>&, unsigned long)
+  at /usr/include/c++/15/bits/alloc_traits.h:614
+std::_Vector_base<>::_M_allocate(unsigned long)
+  at /usr/include/c++/15/bits/stl_vector.h:387
+void std::vector<>::_M_realloc_append<>(std::__cxx11::basic_string<>&&)
+  at /usr/include/c++/15/bits/vector.tcc:572
+std::__cxx11::basic_string<>& std::vector<>::emplace_back<>(std::__cxx11::basic_string<>&&)
+  at /usr/include/c++/15/bits/vector.tcc:123
+std::vector<>::push_back(std::__cxx11::basic_string<>&&)
+  at /usr/include/c++/15/bits/stl_vector.h:1434
+main
+  at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:366
+3 calls with 128B peak consumption from:
+    __libc_start_call_main
+      at ../sysdeps/nptl/libc_start_call_main.h:59
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    __libc_start_main_impl
+      at ../csu/libc-start.c:360
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    _start
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+
+2 calls to allocation functions with 26B peak consumption from
+void std::__cxx11::basic_string<>::_M_construct<>(char const*, unsigned long)
+  at /usr/include/c++/15/bits/basic_string.tcc:291
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1 calls with 26B peak consumption from:
+    std::__cxx11::basic_string<>::basic_string(std::__cxx11::basic_string<> const&)
+      at /usr/include/c++/15/bits/basic_string.h:617
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:370
+    __libc_start_call_main
+      at ../sysdeps/nptl/libc_start_call_main.h:59
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    __libc_start_main_impl
+      at ../csu/libc-start.c:360
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    _start
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1 calls with 0B peak consumption from:
+    std::__cxx11::basic_string<>::basic_string(std::__cxx11::basic_string<> const&)
+      at /usr/include/c++/15/bits/basic_string.h:617
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:373
+    __libc_start_call_main
+      at ../sysdeps/nptl/libc_start_call_main.h:59
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    __libc_start_main_impl
+      at ../csu/libc-start.c:360
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    _start
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+
+2 calls to allocation functions with 0B peak consumption from
+std::__new_allocator<>::allocate(unsigned long, void const*)
+  at /usr/include/c++/15/bits/new_allocator.h:151
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+std::allocator_traits<>::allocate(std::allocator<>&, unsigned long)
+  at /usr/include/c++/15/bits/alloc_traits.h:614
+std::_Bvector_base<>::_M_allocate(unsigned long)
+  at /usr/include/c++/15/bits/stl_bvector.h:685
+std::vector<>::_M_initialize(unsigned long)
+  at /usr/include/c++/15/bits/stl_bvector.h:1558
+std::vector<>::_M_initialize(unsigned long)
+  at /usr/include/c++/15/bits/stl_bvector.h:1554
+std::vector<>::vector(unsigned long, bool const&, std::allocator<> const&)
+  at /usr/include/c++/15/bits/stl_bvector.h:814
+readCNF(std::__cxx11::basic_string<>)
+  at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:118
+1 calls with 0B peak consumption from:
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:372
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1 calls with 0B peak consumption from:
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:373
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+
+2 calls to allocation functions with 0B peak consumption from
+std::basic_filebuf<>::_M_allocate_internal_buffer()
+  in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+1 calls with 0B peak consumption from:
+    std::basic_filebuf<>::open(char const*, std::_Ios_Openmode)
+      in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    std::basic_filebuf<>::open(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:345
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    std::basic_ifstream<>::open(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:745
+    std::basic_ifstream<>::basic_ifstream(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:610
+    readCNF(std::__cxx11::basic_string<>)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:75
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:372
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1 calls with 0B peak consumption from:
+    std::basic_filebuf<>::open(char const*, std::_Ios_Openmode)
+      in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    std::basic_filebuf<>::open(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:345
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    std::basic_ifstream<>::open(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:745
+    std::basic_ifstream<>::basic_ifstream(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:610
+    readCNF(std::__cxx11::basic_string<>)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:75
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:373
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+
+2 calls to allocation functions with 0B peak consumption from
+std::__cxx11::basic_string<>::_M_mutate(unsigned long, unsigned long, char const*, unsigned long)
+  in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+1 calls with 0B peak consumption from:
+    std::__cxx11::basic_string<>::_M_append(char const*, unsigned long)
+      in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    std::basic_istream<>& std::getline<>(std::basic_istream<>&, std::__cxx11::basic_string<>&, char)
+      in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    std::basic_istream<>& std::getline<>(std::basic_istream<>&, std::__cxx11::basic_string<>&)
+      at /usr/include/c++/15/bits/basic_string.h:4407
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    readCNF(std::__cxx11::basic_string<>)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:91
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:372
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1 calls with 0B peak consumption from:
+    std::__cxx11::basic_string<>::_M_append(char const*, unsigned long)
+      in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    std::basic_istream<>& std::getline<>(std::basic_istream<>&, std::__cxx11::basic_string<>&, char)
+      in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    std::basic_istream<>& std::getline<>(std::basic_istream<>&, std::__cxx11::basic_string<>&)
+      at /usr/include/c++/15/bits/basic_string.h:4407
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    readCNF(std::__cxx11::basic_string<>)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:91
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:373
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+
+2 calls to allocation functions with 0B peak consumption from
+_IO_new_fopen::__fopen_internal
+  at ./libio/iofopen.c:65
+  in /usr/lib/x86_64-linux-gnu/libc.so.6
+_IO_new_fopen
+  at ./libio/./libio/iofopen.c:86
+1 calls with 0B peak consumption from:
+    std::__basic_file<>::open(char const*, std::_Ios_Openmode, int)
+      in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    std::basic_filebuf<>::open(char const*, std::_Ios_Openmode)
+      in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    std::basic_filebuf<>::open(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:345
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    std::basic_ifstream<>::open(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:745
+    std::basic_ifstream<>::basic_ifstream(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:610
+    readCNF(std::__cxx11::basic_string<>)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:75
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:372
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+1 calls with 0B peak consumption from:
+    std::__basic_file<>::open(char const*, std::_Ios_Openmode, int)
+      in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    std::basic_filebuf<>::open(char const*, std::_Ios_Openmode)
+      in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+    std::basic_filebuf<>::open(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:345
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    std::basic_ifstream<>::open(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:745
+    std::basic_ifstream<>::basic_ifstream(std::__cxx11::basic_string<> const&, std::_Ios_Openmode)
+      at /usr/include/c++/15/fstream:610
+    readCNF(std::__cxx11::basic_string<>)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:75
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:373
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+
+1 calls to allocation functions with 26B peak consumption from
+void std::__cxx11::basic_string<>::_M_construct<>(char const*, char const*, std::forward_iterator_tag)
+  at /usr/include/c++/15/bits/basic_string.tcc:235
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+std::__cxx11::basic_string<>::basic_string<>(char const*, std::allocator<> const&)
+  at /usr/include/c++/15/bits/basic_string.h:714
+main
+  at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:366
+1 calls with 26B peak consumption from:
+    __libc_start_call_main
+      at ../sysdeps/nptl/libc_start_call_main.h:59
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    __libc_start_main_impl
+      at ../csu/libc-start.c:360
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    _start
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+
+1 calls to allocation functions with 73.73K peak consumption from
+0x7bc2f3cbf8f6
+  in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+1 calls with 73.73K peak consumption from:
+    call_init
+      at ./elf/dl-init.c:74
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init::call_init
+      at ./elf/dl-init.c:120
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init
+      at ./elf/./elf/dl-init.c:121
+    _dl_start_user
+      in /lib64/ld-linux-x86-64.so.2
+
+
+PEAK MEMORY CONSUMERS
+192.10K peak memory consumed over 8004 calls from
+std::__new_allocator<>::allocate(unsigned long, void const*)
+  at /usr/include/c++/15/bits/new_allocator.h:151
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+std::allocator_traits<>::allocate(std::allocator<>&, unsigned long)
+  at /usr/include/c++/15/bits/alloc_traits.h:614
+std::_Vector_base<>::_M_allocate(unsigned long)
+  at /usr/include/c++/15/bits/stl_vector.h:387
+std::vector<>::_M_default_append(unsigned long)
+  at /usr/include/c++/15/bits/vector.tcc:845
+48.00K consumed over 1000 calls from:
+    std::vector<>::push_back(std::vector<> const&)
+      at /usr/include/c++/15/bits/stl_vector.h:1427
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:318
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+24.05K consumed over 1000 calls from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:322
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+24.05K consumed over 1000 calls from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    SATSolverDPLL::is_sat(Formula)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:297
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:322
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+24.00K consumed over 1 calls from:
+    std::vector<>::resize(unsigned long)
+      at /usr/include/c++/15/bits/stl_vector.h:1146
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    readCNF(std::__cxx11::basic_string<>)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:117
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:372
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+24.00K consumed over 1 calls from:
+    std::vector<>::resize(unsigned long)
+      at /usr/include/c++/15/bits/stl_vector.h:1146
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    readCNF(std::__cxx11::basic_string<>)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:117
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:373
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+  and 48.00K from 7 other places
+
+140.03K peak memory consumed over 6042012 calls from
+std::__new_allocator<>::allocate(unsigned long, void const*)
+  at /usr/include/c++/15/bits/new_allocator.h:151
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+std::allocator_traits<>::allocate(std::allocator<>&, unsigned long)
+  at /usr/include/c++/15/bits/alloc_traits.h:614
+std::_Vector_base<>::_M_allocate(unsigned long)
+  at /usr/include/c++/15/bits/stl_vector.h:387
+void std::vector<>::_M_realloc_append<>(int&&)
+  at /usr/include/c++/15/bits/vector.tcc:572
+8.01K consumed over 1002000 calls from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    SATSolverDPLL::is_sat(Formula)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:297
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:322
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+8.01K consumed over 1002000 calls from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_difference(Formula, std::vector<>, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:322
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+8.00K consumed over 1000000 calls from:
+    Formula::Formula(Formula const&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:35
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    check_equivalence(Formula, Formula, SATSolverDPLL&)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:339
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:377
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+8.00K consumed over 2000 calls from:
+    int& std::vector<>::emplace_back<>(int&&)
+      at /usr/include/c++/15/bits/vector.tcc:123
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    std::vector<>::push_back(int&&)
+      at /usr/include/c++/15/bits/stl_vector.h:1434
+    readCNF(std::__cxx11::basic_string<>)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:144
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:373
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+8.00K consumed over 2000 calls from:
+    int& std::vector<>::emplace_back<>(int&&)
+      at /usr/include/c++/15/bits/vector.tcc:123
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    std::vector<>::push_back(int&&)
+      at /usr/include/c++/15/bits/stl_vector.h:1434
+    readCNF(std::__cxx11::basic_string<>)
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:144
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:372
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+  and 100.02K from 43 other places
+
+73.73K peak memory consumed over 1 calls from
+0x7bc2f3cbf8f6
+  in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+73.73K consumed over 1 calls from:
+    call_init
+      at ./elf/dl-init.c:74
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init::call_init
+      at ./elf/dl-init.c:120
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init
+      at ./elf/./elf/dl-init.c:121
+    _dl_start_user
+      in /lib64/ld-linux-x86-64.so.2
+
+128B peak memory consumed over 3 calls from
+std::__new_allocator<>::allocate(unsigned long, void const*)
+  at /usr/include/c++/15/bits/new_allocator.h:151
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+std::allocator_traits<>::allocate(std::allocator<>&, unsigned long)
+  at /usr/include/c++/15/bits/alloc_traits.h:614
+std::_Vector_base<>::_M_allocate(unsigned long)
+  at /usr/include/c++/15/bits/stl_vector.h:387
+void std::vector<>::_M_realloc_append<>(std::__cxx11::basic_string<>&&)
+  at /usr/include/c++/15/bits/vector.tcc:572
+std::__cxx11::basic_string<>& std::vector<>::emplace_back<>(std::__cxx11::basic_string<>&&)
+  at /usr/include/c++/15/bits/vector.tcc:123
+std::vector<>::push_back(std::__cxx11::basic_string<>&&)
+  at /usr/include/c++/15/bits/stl_vector.h:1434
+main
+  at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:366
+128B consumed over 3 calls from:
+    __libc_start_call_main
+      at ../sysdeps/nptl/libc_start_call_main.h:59
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    __libc_start_main_impl
+      at ../csu/libc-start.c:360
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    _start
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+
+26B peak memory consumed over 2 calls from
+void std::__cxx11::basic_string<>::_M_construct<>(char const*, unsigned long)
+  at /usr/include/c++/15/bits/basic_string.tcc:291
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+26B consumed over 1 calls from:
+    std::__cxx11::basic_string<>::basic_string(std::__cxx11::basic_string<> const&)
+      at /usr/include/c++/15/bits/basic_string.h:617
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+    main
+      at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:370
+    __libc_start_call_main
+      at ../sysdeps/nptl/libc_start_call_main.h:59
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    __libc_start_main_impl
+      at ../csu/libc-start.c:360
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    _start
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+
+26B peak memory consumed over 1 calls from
+void std::__cxx11::basic_string<>::_M_construct<>(char const*, char const*, std::forward_iterator_tag)
+  at /usr/include/c++/15/bits/basic_string.tcc:235
+  in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+std::__cxx11::basic_string<>::basic_string<>(char const*, std::allocator<> const&)
+  at /usr/include/c++/15/bits/basic_string.h:714
+main
+  at /mnt/c/Users/guims/Desktop/Computacao Paralela/solver.cpp:366
+26B consumed over 1 calls from:
+    __libc_start_call_main
+      at ../sysdeps/nptl/libc_start_call_main.h:59
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    __libc_start_main_impl
+      at ../csu/libc-start.c:360
+      in /usr/lib/x86_64-linux-gnu/libc.so.6
+    _start
+      in /mnt/c/Users/guims/Desktop/Computacao Paralela/solver
+
+
+MOST TEMPORARY ALLOCATIONS
+1 temporary allocations of 1 allocations in total (100.00%) from
+0x7bc2f3cbf8f6
+  in /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+1 temporary allocations of 1 allocations in total (100.00%) from:
+    call_init
+      at ./elf/dl-init.c:74
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init::call_init
+      at ./elf/dl-init.c:120
+      in /lib64/ld-linux-x86-64.so.2
+    _dl_init
+      at ./elf/./elf/dl-init.c:121
+    _dl_start_user
+      in /lib64/ld-linux-x86-64.so.2
+
+
+total runtime: 1.31s.
+calls to allocation functions: 6050032 (4607792/s)
+temporary memory allocations: 1 (0/s)
+peak heap memory consumption: 406.04K
+peak RSS (including heaptrack overhead): 5.82M
+total memory leaked: 4.10K

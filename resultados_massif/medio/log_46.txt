@@ -1,6 +1,0 @@
-==882== Massif, a heap profiler
-==882== Copyright (C) 2003-2024, and GNU GPL'd, by Nicholas Nethercote et al.
-==882== Using Valgrind-3.26.0 and LibVEX; rerun with -h for copyright info
-==882== Command: ./solver medio/f1.cnf medio/f2_equivalente.cnf
-==882== 
-==882== 

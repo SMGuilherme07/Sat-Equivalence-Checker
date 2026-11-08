@@ -1,0 +1,8 @@
+Repeticoes: 51
+Minimo (s): 0.164332518
+Primeiro quartil (s): 0.167936524
+Mediana (s): 0.169312850
+Media (s): 0.171597759
+Terceiro quartil (s): 0.171612682
+Maximo (s): 0.212151573
+Desvio-padrao amostral (s): 0.008074143

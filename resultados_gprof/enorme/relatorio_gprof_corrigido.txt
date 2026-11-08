@@ -1,0 +1,123 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 35.26      0.61     0.61   204000     0.00     0.00  SATSolverDPLL::apply_transform(Formula&, int)
+ 25.43      1.05     0.44   102000     0.00     0.01  check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&)
+ 21.39      1.42     0.37   306102     0.00     0.00  std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+  5.20      1.51     0.09                             _init
+  4.62      1.59     0.08   102000     0.00     0.00  void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&)
+  3.47      1.65     0.06       51     1.18    32.15  check_equivalence(Formula, Formula, SATSolverDPLL&)
+  2.89      1.70     0.05   102000     0.00     0.01  SATSolverDPLL::unit_propagate(Formula&)
+  1.73      1.73     0.03   306306     0.00     0.00  std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&)
+  0.00      1.73     0.00   918306     0.00     0.00  std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0]
+  0.00      1.73     0.00   204000     0.00     0.00  void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&)
+  0.00      1.73     0.00   102000     0.00     0.01  SATSolverDPLL::DPLL(Formula)
+  0.00      1.73     0.00      204     0.00     0.00  Formula::~Formula()
+  0.00      1.73     0.00      204     0.00     0.00  void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long)
+  0.00      1.73     0.00      102     0.00     0.00  readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+  0.00      1.73     0.00      102     0.00     0.00  Formula::Formula(Formula const&)
+  0.00      1.73     0.00      102     0.00     0.00  std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long)
+  0.00      1.73     0.00       51     0.00     0.00  std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector()
+  0.00      1.73     0.00       51     0.00     0.00  std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&) [clone .isra.0]
+
+			Call graph
+
+
+granularity: each sample hit covers 4 byte(s) for 0.58% of 1.73 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]     94.8    0.00    1.64                 main [1]
+                0.06    1.58      51/51          check_equivalence(Formula, Formula, SATSolverDPLL&) [2]
+                0.00    0.00     102/102         Formula::Formula(Formula const&) [11]
+                0.00    0.00     102/102         readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [12]
+                0.00    0.00     204/204         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long) [23]
+                0.00    0.00     204/204         Formula::~Formula() [22]
+                0.00    0.00      51/51          std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&) [clone .isra.0] [26]
+                0.00    0.00      51/51          std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector() [25]
+-----------------------------------------------
+                0.06    1.58      51/51          main [1]
+[2]     94.8    0.06    1.58      51         check_equivalence(Formula, Formula, SATSolverDPLL&) [2]
+                0.44    1.02  102000/102000      check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [3]
+                0.12    0.00  102000/306102      std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] [7]
+                0.00    0.00  306000/918306      std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] [20]
+-----------------------------------------------
+                0.44    1.02  102000/102000      check_equivalence(Formula, Formula, SATSolverDPLL&) [2]
+[3]     84.2    0.44    1.02  102000         check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [3]
+                0.00    0.66  102000/102000      SATSolverDPLL::DPLL(Formula) [5]
+                0.25    0.00  204000/306102      std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] [7]
+                0.08    0.00  102000/102000      void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) [9]
+                0.03    0.00  306000/306306      std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) [10]
+                0.00    0.00  612000/918306      std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] [20]
+-----------------------------------------------
+                0.05    0.61  102000/102000      SATSolverDPLL::DPLL(Formula) [5]
+[4]     38.2    0.05    0.61  102000         SATSolverDPLL::unit_propagate(Formula&) [4]
+                0.61    0.00  204000/204000      SATSolverDPLL::apply_transform(Formula&, int) [6]
+-----------------------------------------------
+                0.00    0.66  102000/102000      check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [3]
+[5]     38.2    0.00    0.66  102000         SATSolverDPLL::DPLL(Formula) [5]
+                0.05    0.61  102000/102000      SATSolverDPLL::unit_propagate(Formula&) [4]
+-----------------------------------------------
+                0.61    0.00  204000/204000      SATSolverDPLL::unit_propagate(Formula&) [4]
+[6]     35.3    0.61    0.00  204000         SATSolverDPLL::apply_transform(Formula&, int) [6]
+-----------------------------------------------
+                0.00    0.00     102/306102      Formula::Formula(Formula const&) [11]
+                0.12    0.00  102000/306102      check_equivalence(Formula, Formula, SATSolverDPLL&) [2]
+                0.25    0.00  204000/306102      check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [3]
+[7]     21.4    0.37    0.00  306102         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] [7]
+-----------------------------------------------
+                                                 <spontaneous>
+[8]      5.2    0.09    0.00                 _init [8]
+-----------------------------------------------
+                0.08    0.00  102000/102000      check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [3]
+[9]      4.6    0.08    0.00  102000         void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) [9]
+-----------------------------------------------
+                0.00    0.00     306/306306      readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [12]
+                0.03    0.00  306000/306306      check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [3]
+[10]     1.7    0.03    0.00  306306         std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) [10]
+-----------------------------------------------
+                0.00    0.00     102/102         main [1]
+[11]     0.0    0.00    0.00     102         Formula::Formula(Formula const&) [11]
+                0.00    0.00     102/306102      std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] [7]
+                0.00    0.00     306/918306      std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] [20]
+-----------------------------------------------
+                0.00    0.00     102/102         main [1]
+[12]     0.0    0.00    0.00     102         readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [12]
+                0.00    0.00     306/306306      std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) [10]
+                0.00    0.00  204000/204000      void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) [21]
+                0.00    0.00     102/102         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) [24]
+-----------------------------------------------
+                0.00    0.00     306/918306      Formula::Formula(Formula const&) [11]
+                0.00    0.00  306000/918306      check_equivalence(Formula, Formula, SATSolverDPLL&) [2]
+                0.00    0.00  612000/918306      check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [3]
+[20]     0.0    0.00    0.00  918306         std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] [20]
+-----------------------------------------------
+                0.00    0.00  204000/204000      readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [12]
+[21]     0.0    0.00    0.00  204000         void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&) [21]
+-----------------------------------------------
+                0.00    0.00     204/204         main [1]
+[22]     0.0    0.00    0.00     204         Formula::~Formula() [22]
+-----------------------------------------------
+                0.00    0.00     204/204         main [1]
+[23]     0.0    0.00    0.00     204         void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long) [23]
+-----------------------------------------------
+                0.00    0.00     102/102         readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [12]
+[24]     0.0    0.00    0.00     102         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) [24]
+-----------------------------------------------
+                0.00    0.00      51/51          main [1]
+[25]     0.0    0.00    0.00      51         std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector() [25]
+-----------------------------------------------
+                0.00    0.00      51/51          main [1]
+[26]     0.0    0.00    0.00      51         std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&) [clone .isra.0] [26]
+-----------------------------------------------
+
+Index by function name
+
+   [3] check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [11] Formula::Formula(Formula const&) [10] std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&)
+   [2] check_equivalence(Formula, Formula, SATSolverDPLL&) [22] Formula::~Formula() [21] void std::vector<int, std::allocator<int> >::_M_realloc_append<int>(int&&)
+  [12] readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [25] std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector() [20] std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0]
+   [4] SATSolverDPLL::unit_propagate(Formula&) [24] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_default_append(unsigned long) [23] void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<true>(char const*, unsigned long)
+   [6] SATSolverDPLL::apply_transform(Formula&, int) [9] void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) [26] std::basic_ostream<char, std::char_traits<char> >& std::endl<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&) [clone .isra.0]
+   [5] SATSolverDPLL::DPLL(Formula) [7] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] [8] _init

@@ -1,0 +1,62 @@
+--------------------------------------------------------------------------------
+Profile data file 'resultados_callgrind/enorme/callgrind.out' (creator: callgrind-3.26.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 649735602
+Trigger: Program termination
+Profiled target:  ./solver enorme/f1.cnf enorme/f2_equivalente.cnf (PID 1113, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir                     
+--------------------------------------------------------------------------------
+2,946,689,037 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                    file:function
+--------------------------------------------------------------------------------
+697,486,212 (23.67%)  ./malloc/./malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+469,095,885 (15.92%)  ./malloc/./malloc/malloc.c:_int_free_merge_chunk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+199,234,697 ( 6.76%)  ./malloc/./malloc/malloc.c:free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+144,323,008 ( 4.90%)  ./malloc/./malloc/malloc.c:_int_free_maybe_trim [/usr/lib/x86_64-linux-gnu/libc.so.6]
+131,239,836 ( 4.45%)  ./malloc/./malloc/malloc.c:unlink_chunk.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+128,060,000 ( 4.35%)  solver.cpp:SATSolverDPLL::apply_transform(Formula&, int) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+126,253,071 ( 4.28%)  ./malloc/./malloc/malloc.c:__libc_malloc2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+109,022,340 ( 3.70%)  ./malloc/./malloc/malloc.c:malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+102,204,204 ( 3.47%)  ./malloc/./malloc/malloc.c:_int_free_chunk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 96,800,448 ( 3.29%)  ???:operator new(unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+ 88,178,020 ( 2.99%)  /usr/include/c++/15/bits/stl_vector.h:SATSolverDPLL::apply_transform(Formula&, int)
+ 85,548,673 ( 2.90%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 78,202,024 ( 2.65%)  /usr/include/c++/15/bits/stl_vector.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+ 74,368,000 ( 2.52%)  solver.cpp:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+ 60,130,010 ( 2.04%)  /usr/include/c++/15/bits/stl_uninitialized.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+ 46,260,000 ( 1.57%)  /usr/include/c++/15/bits/stl_vector.h:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&)
+ 28,918,075 ( 0.98%)  ./malloc/./malloc/malloc.c:alloc_perturb [/usr/lib/x86_64-linux-gnu/libc.so.6]
+ 24,115,984 ( 0.82%)  solver.cpp:SATSolverDPLL::unit_propagate(Formula&) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+ 18,060,010 ( 0.61%)  /usr/include/c++/15/bits/new_allocator.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+ 18,036,036 ( 0.61%)  ./malloc/./malloc/arena.c:free
+ 18,030,000 ( 0.61%)  /usr/include/c++/15/bits/stl_iterator.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+ 15,042,000 ( 0.51%)  /usr/include/c++/15/bits/stl_algobase.h:std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&)
+ 12,100,063 ( 0.41%)  ???:0x00000000048fe320 [???]
+ 12,100,061 ( 0.41%)  ???:0x00000000048fe540 [???]
+ 12,100,061 ( 0.41%)  ???:0x00000000048feda0 [???]
+ 12,100,056 ( 0.41%)  ???:operator delete(void*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+ 12,100,048 ( 0.41%)  ???:0x00000000040023a0 [???]
+ 12,100,048 ( 0.41%)  ???:operator delete(void*, unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+ 12,100,042 ( 0.41%)  ???:0x0000000004002390 [???]
+ 12,068,026 ( 0.41%)  ???:0x0000000004002360 [???]
+ 12,043,992 ( 0.41%)  /usr/include/c++/15/bits/stl_vector.h:SATSolverDPLL::unit_propagate(Formula&)
+ 12,024,102 ( 0.41%)  ./malloc/./malloc/arena.c:__libc_malloc2
+ 12,024,000 ( 0.41%)  /usr/include/c++/15/bits/stl_construct.h:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&)
+ 10,096,014 ( 0.34%)  /usr/include/c++/15/bits/stl_vector.h:check_equivalence(Formula, Formula, SATSolverDPLL&)
+  8,064,000 ( 0.27%)  /usr/include/c++/15/bits/stl_vector.h:void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&)
+  8,036,000 ( 0.27%)  /usr/include/c++/15/bits/stl_uninitialized.h:void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&)
+
