@@ -1,0 +1,270 @@
+--------------------------------------------------------------------------------
+Profile data file 'callgrind_medio.out' (creator: callgrind-3.26.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 7135760
+Trigger: Program termination
+Profiled target:  ./solver medio/f1.cnf medio/f2_equivalente.cnf (PID 1099, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir                  
+--------------------------------------------------------------------------------
+33,018,429 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                  file:function
+--------------------------------------------------------------------------------
+
+7,487,843 (22.68%)  *  ./malloc/./malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  258,440 ( 0.78%)  >   ./malloc/./malloc/malloc.c:alloc_perturb (51,688x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  107,281 ( 0.32%)  >   ./malloc/./malloc/malloc.c:unlink_chunk.isra.0 (4,705x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       88 ( 0.00%)  >   ./malloc/./malloc/morecore.c:__glibc_morecore (2x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+4,903,871 (14.85%)  *  ./malloc/./malloc/malloc.c:_int_free_merge_chunk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,429,638 ( 4.33%)  >   ./malloc/./malloc/malloc.c:_int_free_maybe_trim (59,402x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,114,764 ( 3.38%)  >   ./malloc/./malloc/malloc.c:unlink_chunk.isra.0 (56,889x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+2,133,089 ( 6.46%)  *  ./malloc/./malloc/malloc.c:free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+8,458,107 (25.62%)  >   ./malloc/./malloc/malloc.c:_int_free_chunk (59,402x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+      312 ( 0.00%)  >   ./malloc/./malloc/malloc.c:tcache_free_init (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+1,429,638 ( 4.33%)  *  ./malloc/./malloc/malloc.c:_int_free_maybe_trim [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+1,286,000 ( 3.89%)  *  solver.cpp:SATSolverDPLL::apply_transform(Formula&, int) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+
+1,244,082 ( 3.77%)  *  ./malloc/./malloc/malloc.c:__libc_malloc2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+7,853,652 (23.79%)  >   ./malloc/./malloc/malloc.c:_int_malloc (59,242x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+1,222,045 ( 3.70%)  *  ./malloc/./malloc/malloc.c:unlink_chunk.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+1,218,555 ( 3.69%)  *  ./malloc/./malloc/malloc.c:malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+9,216,080 (27.91%)  >   ./malloc/./malloc/malloc.c:__libc_malloc2 (59,241x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+1,040,448 ( 3.15%)  *  ???:operator new(unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+10,563,438 (31.99%)  >   ???:0x00000000048fe320 (65,028x) [???]
+
+1,009,834 ( 3.06%)  *  ./malloc/./malloc/malloc.c:_int_free_chunk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+7,448,273 (22.56%)  >   ./malloc/./malloc/malloc.c:_int_free_merge_chunk (59,402x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+  920,733 ( 2.79%)  *  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+  897,820 ( 2.72%)  *  /usr/include/c++/15/bits/stl_vector.h:SATSolverDPLL::apply_transform(Formula&, int)
+
+  800,224 ( 2.42%)  *  /usr/include/c++/15/bits/stl_vector.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+
+  776,800 ( 2.35%)  *  solver.cpp:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+9,510,237 (28.80%)  >   /usr/include/c++/15/bits/vector.tcc:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] (400x) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+2,702,002 ( 8.18%)  >   solver.cpp:SATSolverDPLL::DPLL(Formula) (200x) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+  185,621 ( 0.56%)  >   /usr/include/c++/15/bits/vector.tcc:std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] (1,200x) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+
+  613,010 ( 1.86%)  *  /usr/include/c++/15/bits/stl_uninitialized.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+  916,600 ( 2.78%)  >   ???:0x0000000004002360 (61,000x) [???]
+
+  510,872 ( 1.55%)  *  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  188,912 ( 0.57%)  >   ./elf/./elf/dl-lookup.c:check_match (1,929x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+      492 ( 0.00%)  >   ./elf/../sysdeps/nptl/dl-tls_init_tp.c:rtld_mutex_dummy (164x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+      159 ( 0.00%)  >   ./elf/./elf/dl-misc.c:_dl_higher_prime_number (2x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+       10 ( 0.00%)  >   ./elf/./elf/dl-minimal-malloc.c:__minimal_free (2x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+
+  499,394 ( 1.51%)  *  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+
+  486,000 ( 1.47%)  *  /usr/include/c++/15/bits/stl_vector.h:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&)
+  337,863 ( 1.02%)  >   /usr/include/c++/15/bits/vector.tcc:void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&) (200x) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+  165,000 ( 0.50%)  >   /usr/include/c++/15/bits/vector.tcc:std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) (600x) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+
+  258,440 ( 0.78%)  *  ./malloc/./malloc/malloc.c:alloc_perturb [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+  251,584 ( 0.76%)  *  solver.cpp:SATSolverDPLL::unit_propagate(Formula&) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+2,320,226 ( 7.03%)  >   solver.cpp:SATSolverDPLL::apply_transform(Formula&, int) (400x) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+
+  186,010 ( 0.56%)  *  /usr/include/c++/15/bits/new_allocator.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+11,319,355 (34.28%)  >   ???:0x0000000004002390 (61,602x) [???]
+
+  183,000 ( 0.55%)  *  /usr/include/c++/15/bits/stl_iterator.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+
+  178,206 ( 0.54%)  *  ./malloc/./malloc/arena.c:free
+
+  178,066 ( 0.54%)  *  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  717,866 ( 2.17%)  >   ./elf/./elf/dl-lookup.c:do_lookup_x (1,937x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+
+  154,200 ( 0.47%)  *  /usr/include/c++/15/bits/stl_algobase.h:std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&)
+
+  146,561 ( 0.44%)  *  ./elf/./elf/dl-reloc.c:_dl_relocate_object_no_relro [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+1,322,725 ( 4.01%)  >   ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x (1,835x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+
+  142,636 ( 0.43%)  *  ???:std::istreambuf_iterator<char, std::char_traits<char> > std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_int<long>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, long&) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+   29,116 ( 0.09%)  >   ???:0x0000000000153900 (1,004x) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+   17,516 ( 0.05%)  >   ???:0x000000000014df80 (604x) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+   12,048 ( 0.04%)  >   ???:0x00000000001539d0 (1,004x) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+    7,852 ( 0.02%)  >   ???:0x000000000014a8b0 (604x) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+    2,400 ( 0.01%)  >   ???:0x000000000014a640 (400x) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+
+  130,063 ( 0.39%)  *  ???:0x00000000048fe320 [???]
+10,433,745 (31.60%)  >   ./malloc/./malloc/malloc.c:malloc (65,029x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+      888 ( 0.00%)  >   ./elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave (1x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+
+  130,061 ( 0.39%)  *  ???:0x00000000048fe540 [???]
+11,030,653 (33.41%)  >   ???:operator delete(void*) (65,028x) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+      604 ( 0.00%)  >   ./elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave (1x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+
+  130,061 ( 0.39%)  *  ???:0x00000000048feda0 [???]
+10,769,648 (32.62%)  >   ./malloc/./malloc/malloc.c:free (65,028x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+      888 ( 0.00%)  >   ./elf/../sysdeps/x86_64/dl-trampoline.h:_dl_runtime_resolve_xsave (1x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+
+  130,056 ( 0.39%)  *  ???:operator delete(void*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+10,900,597 (33.01%)  >   ???:0x00000000048feda0 (65,028x) [???]
+
+  130,048 ( 0.39%)  *  ???:0x00000000040023a0 [???]
+11,291,022 (34.20%)  >   ???:operator delete(void*, unsigned long) (65,024x) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+
+  130,048 ( 0.39%)  *  ???:operator delete(void*, unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+11,160,974 (33.80%)  >   ???:0x00000000048fe540 (65,024x) [???]
+
+  130,042 ( 0.39%)  *  ???:0x0000000004002390 [???]
+11,602,737 (35.14%)  >   ???:operator new(unsigned long) (65,021x) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+
+  126,826 ( 0.38%)  *  ???:0x0000000004002360 [???]
+  920,675 ( 2.79%)  >   ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms (63,413x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+
+  124,392 ( 0.38%)  *  /usr/include/c++/15/bits/stl_vector.h:SATSolverDPLL::unit_propagate(Formula&)
+
+  122,491 ( 0.37%)  *  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object_no_relro
+      174 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:memcpy (6x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+       69 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/memset.c:memset (3x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       50 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strlen.c:strlen (2x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       50 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wcschr.c:wcschr (2x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       50 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strnlen.c:strnlen (2x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       44 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/memmove.c:memmove (2x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       44 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/memcpy.c:memcpy@@GLIBC_2.14 (2x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       42 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wmemchr.c:wmemchr (2x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       38 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wmemset.c:wmemset (2x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       30 ( 0.00%)  >   ./string/../sysdeps/x86/cacheinfo.c:__x86_cacheinfo (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       25 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/memrchr.c:memrchr (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       25 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wmemcmp.c:wmemcmp (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       25 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/memcmp.c:bcmp (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       25 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strrchr.c:rindex (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       25 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wcscmp.c:wcscmp (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       25 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strchrnul.c:strchrnul (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       23 ( 0.00%)  >   ./debug/../sysdeps/x86_64/multiarch/memset_chk.c:__memset_chk (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       22 ( 0.00%)  >   ./debug/../sysdeps/x86_64/multiarch/mempcpy_chk.c:__mempcpy_chk (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       22 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strncase.c:strncasecmp (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       22 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strcasecmp_l.c:strcasecmp_l (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       22 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/stpncpy.c:strcasecmp (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       22 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strncmp.c:strncmp (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       22 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/mempcpy.c:mempcpy (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       22 ( 0.00%)  >   ./debug/../sysdeps/x86_64/multiarch/memcpy_chk.c:__memcpy_chk (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       22 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strncase_l.c:strncasecmp_l (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       22 ( 0.00%)  >   ./debug/../sysdeps/x86_64/multiarch/memmove_chk.c:__memmove_chk (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       21 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strncpy.c:strncpy (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       21 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/stpncpy.c:stpncpy (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       21 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strchr.c:index (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       21 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/memchr.c:memchr (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       20 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wcsnlen.c:wcsnlen (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       20 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strcmp.c:strcmp (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       20 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wcslen.c:wcslen (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       20 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_expf.c:expf@@GLIBC_2.27 (2x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       19 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/stpcpy.c:stpcpy (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       19 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strcpy.c:strcpy (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       19 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strcat.c:strcat (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       18 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wcpncpy.c:wcpncpy (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       18 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wcscat.c:wcscat (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       18 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wcsncpy.c:wcsncpy (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       17 ( 0.00%)  >   ./wcsmbs/../sysdeps/x86_64/multiarch/wcscpy.c:wcscpy (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_logf.c:logf@@GLIBC_2.27 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_sinf.c:sinf (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_expm1.c:expm1 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_atanh.c:__atanh_finite@GLIBC_2.15 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_log2.c:log2@@GLIBC_2.29 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_log1p.c:__log1p (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_exp2f.c:exp2f@@GLIBC_2.27 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_sincosf.c:sincosf (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_sinh.c:__sinh_finite@GLIBC_2.15 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_powf.c:powf@@GLIBC_2.27 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_log2f.c:log2f@@GLIBC_2.27 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+       10 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_cosf.c:cosf (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        9 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_exp.c:__exp_finite@GLIBC_2.15 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        9 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_atan2.c:__atan2_finite@GLIBC_2.15 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        9 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_tan.c:tan (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        9 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_sin.c:sin (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        9 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_atan.c:atan (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        9 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_sin.c:cos (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        9 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_log.c:__log_finite@GLIBC_2.15 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        8 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_pow.c:__pow_finite@GLIBC_2.15 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        8 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_sincos.c:sincos (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        8 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_asin.c:__acos_finite@GLIBC_2.15 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        8 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/e_asin.c:__asin_finite@GLIBC_2.15 (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        7 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_ceilf.c:ceilf (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        7 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_floor.c:floor (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        7 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_floorf.c:floorf (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        7 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_trunc.c:trunc (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        7 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_roundevenf.c:roundevenf (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        7 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strspn.c:strspn (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+        7 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strcspn.c:strcspn (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+        7 ( 0.00%)  >   ./string/../sysdeps/x86_64/multiarch/strpbrk.c:strpbrk (1x) [/usr/lib/x86_64-linux-gnu/libc.so.6]
+        7 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_roundeven.c:roundeven (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        7 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_truncf.c:truncf (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        7 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_ceil.c:ceil (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        6 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_fma.c:fma (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+        6 ( 0.00%)  >   ./elf/../sysdeps/x86/dl-get-cpu-features.c:__x86_cpu_features (1x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+        6 ( 0.00%)  >   ./math/../sysdeps/x86_64/fpu/multiarch/s_fmaf.c:fmaf (1x) [/usr/lib/x86_64-linux-gnu/libm.so.6]
+
+  122,400 ( 0.37%)  *  /usr/include/c++/15/bits/stl_construct.h:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&)
+
+  118,484 ( 0.36%)  *  ./malloc/./malloc/arena.c:__libc_malloc2
+
+  116,365 ( 0.35%)  *  ./elf/./elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   72,547 ( 0.22%)  >   ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strcmp (2,043x) [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+
+  109,614 ( 0.33%)  *  /usr/include/c++/15/bits/stl_vector.h:check_equivalence(Formula, Formula, SATSolverDPLL&)
+
+  107,792 ( 0.33%)  *  ./elf/./elf/do-rel.h:_dl_relocate_object_no_relro
+
+   86,400 ( 0.26%)  *  /usr/include/c++/15/bits/stl_vector.h:void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&)
+
+   85,140 ( 0.26%)  *  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+
+   83,600 ( 0.25%)  *  /usr/include/c++/15/bits/stl_uninitialized.h:void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&)
+    3,400 ( 0.01%)  >   ???:0x0000000004002360 (200x) [???]
+
+   64,000 ( 0.19%)  *  /usr/include/c++/15/bits/stl_construct.h:check_equivalence(Formula, Formula, SATSolverDPLL&)
+
+   62,406 ( 0.19%)  *  /usr/include/c++/15/bits/stl_algobase.h:SATSolverDPLL::apply_transform(Formula&, int)
+
+   45,800 ( 0.14%)  *  /usr/include/c++/15/bits/new_allocator.h:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&)
+7,324,813 (22.18%)  >   ???:0x00000000040023a0 (42,200x) [???]
+  135,475 ( 0.41%)  >   ???:0x0000000004002390 (600x) [???]
+
+   45,800 ( 0.14%)  *  /usr/include/c++/15/bits/vector.tcc:SATSolverDPLL::apply_transform(Formula&, int)
+
+   39,806 ( 0.12%)  *  ???:std::istream::sentry::sentry(std::istream&, bool) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+    3,631 ( 0.01%)  >   ???:std::basic_filebuf<char, std::char_traits<char> >::underflow() (4x) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+      958 ( 0.00%)  >   ???:0x0000000004900fe0 (2x) [???]
+
+   35,082 ( 0.11%)  *  ???:std::istream::operator>>(int&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+  215,288 ( 0.65%)  >   ???:std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::do_get(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, long&) const (604x) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+   41,834 ( 0.13%)  >   ???:0x0000000004900c80 (606x) [???]
+
+   30,702 ( 0.09%)  *  /usr/include/c++/15/bits/vector.tcc:std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+
+   29,116 ( 0.09%)  *  ???:0x0000000000153900 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+
+   23,600 ( 0.07%)  *  /usr/include/c++/15/bits/new_allocator.h:check_equivalence(Formula, Formula, SATSolverDPLL&)
+3,955,314 (11.98%)  >   ???:0x00000000040023a0 (21,400x) [???]
+    9,329 ( 0.03%)  >   ???:0x0000000004002390 (200x) [???]
+
+   20,468 ( 0.06%)  *  /usr/include/c++/15/bits/vector.tcc:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+
+   19,602 ( 0.06%)  *  solver.cpp:readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+  293,416 ( 0.89%)  >   ???:0x0000000004002330 (606x) [???]
+    4,445 ( 0.01%)  >   ???:0x0000000004002430 (4x) [???]
+    1,247 ( 0.00%)  >   ???:0x0000000004002420 (2x) [???]
+

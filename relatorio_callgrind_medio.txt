@@ -1,0 +1,82 @@
+--------------------------------------------------------------------------------
+Profile data file 'callgrind_medio.out' (creator: callgrind-3.26.0)
+--------------------------------------------------------------------------------
+I1 cache: 
+D1 cache: 
+LL cache: 
+Timerange: Basic block 0 - 7135760
+Trigger: Program termination
+Profiled target:  ./solver medio/f1.cnf medio/f2_equivalente.cnf (PID 1099, part 1)
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Thresholds:       99
+Include dirs:     
+User annotated:   
+Auto-annotation:  off
+
+--------------------------------------------------------------------------------
+Ir                  
+--------------------------------------------------------------------------------
+33,018,429 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+Ir                  file:function
+--------------------------------------------------------------------------------
+7,487,843 (22.68%)  ./malloc/./malloc/malloc.c:_int_malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+4,903,871 (14.85%)  ./malloc/./malloc/malloc.c:_int_free_merge_chunk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+2,133,089 ( 6.46%)  ./malloc/./malloc/malloc.c:free [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,429,638 ( 4.33%)  ./malloc/./malloc/malloc.c:_int_free_maybe_trim [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,286,000 ( 3.89%)  solver.cpp:SATSolverDPLL::apply_transform(Formula&, int) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+1,244,082 ( 3.77%)  ./malloc/./malloc/malloc.c:__libc_malloc2 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,222,045 ( 3.70%)  ./malloc/./malloc/malloc.c:unlink_chunk.isra.0 [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,218,555 ( 3.69%)  ./malloc/./malloc/malloc.c:malloc [/usr/lib/x86_64-linux-gnu/libc.so.6]
+1,040,448 ( 3.15%)  ???:operator new(unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+1,009,834 ( 3.06%)  ./malloc/./malloc/malloc.c:_int_free_chunk [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  920,733 ( 2.79%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:__memcpy_avx_unaligned_erms [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  897,820 ( 2.72%)  /usr/include/c++/15/bits/stl_vector.h:SATSolverDPLL::apply_transform(Formula&, int)
+  800,224 ( 2.42%)  /usr/include/c++/15/bits/stl_vector.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+  776,800 ( 2.35%)  solver.cpp:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+  613,010 ( 1.86%)  /usr/include/c++/15/bits/stl_uninitialized.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+  510,872 ( 1.55%)  ./elf/./elf/dl-lookup.c:do_lookup_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  499,394 ( 1.51%)  ./elf/../sysdeps/generic/dl-new-hash.h:_dl_lookup_symbol_x
+  486,000 ( 1.47%)  /usr/include/c++/15/bits/stl_vector.h:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&)
+  258,440 ( 0.78%)  ./malloc/./malloc/malloc.c:alloc_perturb [/usr/lib/x86_64-linux-gnu/libc.so.6]
+  251,584 ( 0.76%)  solver.cpp:SATSolverDPLL::unit_propagate(Formula&) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+  186,010 ( 0.56%)  /usr/include/c++/15/bits/new_allocator.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+  183,000 ( 0.55%)  /usr/include/c++/15/bits/stl_iterator.h:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0]
+  178,206 ( 0.54%)  ./malloc/./malloc/arena.c:free
+  178,066 ( 0.54%)  ./elf/./elf/dl-lookup.c:_dl_lookup_symbol_x [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  154,200 ( 0.47%)  /usr/include/c++/15/bits/stl_algobase.h:std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&)
+  146,561 ( 0.44%)  ./elf/./elf/dl-reloc.c:_dl_relocate_object_no_relro [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  142,636 ( 0.43%)  ???:std::istreambuf_iterator<char, std::char_traits<char> > std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::_M_extract_int<long>(std::istreambuf_iterator<char, std::char_traits<char> >, std::istreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, std::_Ios_Iostate&, long&) const [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+  130,063 ( 0.39%)  ???:0x00000000048fe320 [???]
+  130,061 ( 0.39%)  ???:0x00000000048fe540 [???]
+  130,061 ( 0.39%)  ???:0x00000000048feda0 [???]
+  130,056 ( 0.39%)  ???:operator delete(void*) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+  130,048 ( 0.39%)  ???:0x00000000040023a0 [???]
+  130,048 ( 0.39%)  ???:operator delete(void*, unsigned long) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+  130,042 ( 0.39%)  ???:0x0000000004002390 [???]
+  126,826 ( 0.38%)  ???:0x0000000004002360 [???]
+  124,392 ( 0.38%)  /usr/include/c++/15/bits/stl_vector.h:SATSolverDPLL::unit_propagate(Formula&)
+  122,491 ( 0.37%)  ./elf/../sysdeps/x86_64/dl-machine.h:_dl_relocate_object_no_relro
+  122,400 ( 0.37%)  /usr/include/c++/15/bits/stl_construct.h:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&)
+  118,484 ( 0.36%)  ./malloc/./malloc/arena.c:__libc_malloc2
+  116,365 ( 0.35%)  ./elf/./elf/dl-lookup.c:check_match [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+  109,614 ( 0.33%)  /usr/include/c++/15/bits/stl_vector.h:check_equivalence(Formula, Formula, SATSolverDPLL&)
+  107,792 ( 0.33%)  ./elf/./elf/do-rel.h:_dl_relocate_object_no_relro
+   86,400 ( 0.26%)  /usr/include/c++/15/bits/stl_vector.h:void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&)
+   85,140 ( 0.26%)  ./string/../sysdeps/x86_64/multiarch/../multiarch/strcmp-sse2.S:strcmp [/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2]
+   83,600 ( 0.25%)  /usr/include/c++/15/bits/stl_uninitialized.h:void std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_realloc_append<std::vector<int, std::allocator<int> > const&>(std::vector<int, std::allocator<int> > const&)
+   64,000 ( 0.19%)  /usr/include/c++/15/bits/stl_construct.h:check_equivalence(Formula, Formula, SATSolverDPLL&)
+   62,406 ( 0.19%)  /usr/include/c++/15/bits/stl_algobase.h:SATSolverDPLL::apply_transform(Formula&, int)
+   45,800 ( 0.14%)  /usr/include/c++/15/bits/new_allocator.h:check_difference(Formula, std::vector<int, std::allocator<int> >, SATSolverDPLL&)
+   45,800 ( 0.14%)  /usr/include/c++/15/bits/vector.tcc:SATSolverDPLL::apply_transform(Formula&, int)
+   39,806 ( 0.12%)  ???:std::istream::sentry::sentry(std::istream&, bool) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+   35,082 ( 0.11%)  ???:std::istream::operator>>(int&) [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+   30,702 ( 0.09%)  /usr/include/c++/15/bits/vector.tcc:std::vector<int, std::allocator<int> >::operator=(std::vector<int, std::allocator<int> > const&) [clone .isra.0] [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+   29,116 ( 0.09%)  ???:0x0000000000153900 [/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35]
+   23,600 ( 0.07%)  /usr/include/c++/15/bits/new_allocator.h:check_equivalence(Formula, Formula, SATSolverDPLL&)
+   20,468 ( 0.06%)  /usr/include/c++/15/bits/vector.tcc:std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::operator=(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [clone .isra.0] [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+   19,602 ( 0.06%)  solver.cpp:readCNF(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) [/mnt/c/Users/guims/Desktop/Computacao Paralela/solver]
+
